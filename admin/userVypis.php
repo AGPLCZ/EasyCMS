@@ -1,5 +1,6 @@
 <?php
 require "header.php";
+require "config.php";
 ?>
 
 <div class="app-wrapper">
@@ -39,24 +40,24 @@ require "header.php";
 										<option value="userEmail">Email</option>
 
 									</select>
-							</div>
 
-							<div class="col-auto">
-								<div class="col-auto">
-								</div>
-								<div class="col-auto">
-									<input type="text" name="hledanaFraze" id="search-orders" class="form-control search-orders" placeholder="Hledaný výraz">
-								</div>
-							</div>
 
-							<div class="col-auto">
+									<div class="col-auto">
+										<div class="col-auto">
+										</div>
+										<div class="col-auto">
+											<input type="text" name="hledanaFraze" id="search-orders" class="form-control search-orders" placeholder="Hledaný výraz">
+										</div>
+									</div>
 
-								<div class="col-auto">
-								</div>
-								<div class="col-auto">
-									<button type="submit" name="userSubmitSearch" class="btn app-btn-secondary">Hledej</button>
 
-								</div>
+
+									<div class="col-auto">
+									</div>
+									<div class="col-auto">
+										<button type="submit" name="userSubmitSearch" class="btn app-btn-secondary">Hledej</button>
+
+									</div>
 								</form>
 
 							</div>
@@ -88,140 +89,191 @@ require "header.php";
 					<div class="app-card app-card-orders-table shadow-sm mb-5">
 						<div class="app-card-body">
 							<div class="table-responsive">
-								<table class=" table app-table-hover mb-0 text-left">
+								<form action="userVypis.php" method="post">
+									<table class=" table app-table-hover mb-0 text-left">
 
-									<thead>
-										<tr>
-										<tr>
-											<td colspan="9">
-												<div class="col-auto">
-													<a class="btn app-btn-secondary" href="userNew.php">
-														<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
-															<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-															<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-														</svg>
-														Vytvořit nového uživatele
-													</a>
-												</div>
-											</td>
-										</tr>
+										<thead>
+											<tr>
+											<tr>
+												<td colspan="9">
 
-										<th class="cell"></th>
-										<th class="cell">ID</th>
-										<th class="cell">Login</th>
-										<th class="cell">Email</th>
-										<th class="cell">Nick</th>
-										<th class="cell">Jméno</th>
-										<th class="cell">Příjmení</th>
-										<th class="cell">Práva</th>
-										<th class="cell"></th>
-										</tr>
-									</thead>
-									<form action="userVypis.php" method="post"">
-									<tbody>
-										
-										<?php
-										require "config.php";
+													<div class="col-auto">
+														<a class="btn app-btn-secondary" href="userNew.php">
+															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+																<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+																<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+															</svg>
+															Vytvořit nového uživatele
+														</a>
+													</div>
+												</td>
+											</tr>
 
-
-										// vypis hledaných uživatelů
-										if (isset($_POST["userSubmitSearch"])) {
-
-											$hledanyTyp = $_POST['hledanyTyp'];
-											$hledanaFraze = trim($_POST['hledanaFraze']);  // trim - odrstraní bílé znaky, " ", "\t", "\n", "\r", "\0", "\x0B".
-
-											if (!$hledanyTyp or !$hledanaFraze) {
-												echo '<p class="badge bg-danger">Nevyplnili jste některé údaje</p>';
-											}
-
-											switch ($hledanyTyp) {
-												case 'userLogin':
-												case 'userEmail':
-													break;
-
-												default:
-													echo '<p class="badge bg-danger">Nevyplnili jste některé údaje</p>';
-													exit;
-											}
-
+											<?php
 											// vypis hledaných uživatelů
-											$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE $hledanyTyp LIKE ?";
-											$stmt = $conn->prepare($query);
-											$stmt->bind_param('s', $hledanaFraze); // s = string, i = integer, d = double, b = blob
-											$stmt->execute();
-											$stmt->store_result();
-											$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
-											echo '<p class="badge bg-success">Počet nalezených záznamů:' . $stmt->num_rows . '</p>';
+											if (isset($_POST["userSubmitSearch"])) {
 
-											// $stmt->fetch - hodnoty sloupců nasledujícího řádku budou vyplněny do těchto vázaných proměnných
+												$hledanyTyp = $_POST['hledanyTyp'];
+												$hledanaFraze = trim($_POST['hledanaFraze']);  // trim - odrstraní bílé znaky, " ", "\t", "\n", "\r", "\0", "\x0B".
 
-											while ($stmt->fetch()) {
+												if (!$hledanyTyp or !$hledanaFraze) {
+													echo '<p class="badge bg-danger">Nevyplnili jste některé údaje</p>';
+												}
 
-												echo '<tr>
-												<td class="cell"><input type="checkbox" name="userDel[]" value="' . $userId . '"></td>
-												<td class="cell"><span class="cell-data">' . $userId . '</span><span class="note">userId</span></td>
-												<td class="cell">' . $userLogin . '</td><td class="cell">' . $userEmail . '</td>
-												<td class="cell">' . $userNickName . '</td><td class="cell">' . $userFirstName . '</td>
-												<td class="cell">' . $userLastName . '</td>' . '<td class="cell"><span class="badge bg-success">Admin</span></td>' . '
-												<td class="cell"><a class="btn btn-outline-secondary" href="userUpdate.php?userUpdateId=' . $userId . '">' . '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-												<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-												<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-											  </svg> Upravit uživatele </a></td>
-												</tr>';
+												switch ($hledanyTyp) {
+													case 'userLogin':
+													case 'userEmail':
+														break;
+
+													default:
+														echo '<p class="badge bg-danger">Nevyplnili jste některé údaje</p>';
+														exit;
+												}
+
+												// vypis hledaných uživatelů
+												$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE $hledanyTyp LIKE ?";
+												$stmt = $conn->prepare($query);
+												$stmt->bind_param('s', $hledanaFraze); // s = string, i = integer, d = double, b = blob
+												$stmt->execute();
+												$stmt->store_result();
+												$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
+												echo '<tr><td colspan="9" class="cell">Počet nalezených záznamů:' . $stmt->num_rows . ' 	</td></tr>';
+											?>
+
+												<tr>
+													<th class="cell"></th>
+													<th class="cell">ID</th>
+													<th class="cell">Login</th>
+													<th class="cell">Email</th>
+													<th class="cell">Nick</th>
+													<th class="cell">Jméno</th>
+													<th class="cell">Příjmení</th>
+													<th class="cell">Práva</th>
+													<th class="cell"></th>
+												</tr>
+										</thead>
+
+										<tbody>
+
+											<?php
+												while ($stmt->fetch()) { ?>
+												<tr>
+													<td class=" cell"><input type="checkbox" name="userDel[]" value="<?php echo $userId; ?>"></td>
+													<td class="cell"><span class="cell-data"> <?php echo $userId; ?></span><span class="note">userId</span></td>
+													<td class="cell"><?php echo $userLogin; ?></td>
+													<td class="cell"><?php echo $userEmail; ?></td>
+													<td class="cell"><?php echo $userNickName ?></td>
+													<td class="cell"><?php echo $userFirstName ?></td>
+													<td class="cell"><?php echo $userLastName  ?></td>
+													<td class="cell"><span class="badge bg-success">Admin</span></td>
+													<td class="cell"><a class="btn btn-outline-secondary" href="userUpdate.php?userUpdateId=<?php echo $userId  ?>">
+
+															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+																<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+																<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+															</svg> Upravit uživatele </a></td>
+												</tr>
+											<?php
+												}
+											?>
+											<tr>
+												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
+											<tr>
+											<?php
 											}
-										}
+											?>
+
+											<?php
+
+											// smazat uživatele
+											if (isset($_POST["userSubmitDel"])) {
+
+												foreach ($_POST['userDel'] as $userDel) {
+													$query = ("DELETE FROM users WHERE userId=?");
+													$stmt = $conn->stmt_init();
+													$stmt->prepare($query);
+													$stmt->bind_param('s', $userDel);
+													$stmt->execute();
+												}
+											}
+
+											?>
+
+											<?php
+
+
+											// výpis uživatelů, nezobrazuje se když POST hledání  -----------------------------
+											if (!isset($_POST["userSubmitSearch"])) {
+											?>
+
+											<tr>
+												<th class="cell"></th>
+												<th class="cell">ID</th>
+												<th class="cell">Login</th>
+												<th class="cell">Email</th>
+												<th class="cell">Nick</th>
+												<th class="cell">Jméno</th>
+												<th class="cell">Příjmení</th>
+												<th class="cell">Práva</th>
+												<th class="cell"></th>
+											</tr>
+											</thead>
+										<tbody>
+
+											<?php
 
 
 
-										// smazat uživatele
-										if (isset($_POST["userSubmitDel"])) {
-
-											foreach ($_POST['userDel'] as $userDel) {
-												$query = ("DELETE FROM users WHERE userId=?");
+												$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
-												$stmt->bind_param('s', $userDel);
 												$stmt->execute();
+												$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
+
+
+												while ($stmt->fetch()) { ?>
+
+
+
+
+												<tr>
+													<td class="cell"><input type="checkbox" name="userDel[]" value="<?php echo $userId ?>"></td>
+													<td class=" cell"><span class="cell-data"><?php echo $userId ?></span><span class="note">userId</span></td>
+													<td class="cell"><?php echo $userLogin ?></td>
+													<td class="cell"><?php echo $userEmail ?></td>
+													<td class="cell"><?php echo $userNickName ?></td>
+													<td class="cell"><?php echo $userFirstName ?></td>
+													<td class="cell"><?php echo $userLastName ?></td>
+													<td class="cell"><span class="badge bg-success">Admin</span></td>
+													<td class="cell"><a class="btn btn-outline-secondary" href="userUpdate.php?userUpdateId=<?php echo $userId ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+																<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+																<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+															</svg> Upravit uživatele </a></td>
+												</tr>
+
+
+											<?php
+												}
+											?>
+
+											<tr>
+												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button>
+												</td>
+											<tr>
+											<?php
 											}
-										}
-
-
-										// výpis uživatelů, nezobrazuje se když POST hledání
-										if (!isset($_POST["userSubmitSearch"])) {
-											$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId";
-											$stmt = $conn->stmt_init();
-											$stmt->prepare($query);
-											$stmt->execute();
-											$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
-
-
-											while ($stmt->fetch()) {
-												echo '<tr>
-												<td class="cell"><input type="checkbox" name="userDel[]" value="' . $userId . '"></td>
-												<td class="cell"><span class="cell-data">' . $userId . '</span><span class="note">userId</span></td>
-												<td class="cell">' . $userLogin . '</td><td class="cell">' . $userEmail . '</td>
-												<td class="cell">' . $userNickName . '</td><td class="cell">' . $userFirstName . '</td>
-												<td class="cell">' . $userLastName . '</td>' . '<td class="cell"><span class="badge bg-success">Admin</span></td>' . '
-												<td class="cell"><a class="btn btn-outline-secondary" href="userUpdate.php?userUpdateId=' . $userId . '">' . '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-												<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-												<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-											  </svg> Upravit uživatele </a></td>
-												</tr>';
-											}
-
-											echo '<tr><td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td><tr>';
-										}
 
 
 
-										$stmt->close();
-										$conn->close();
+											$stmt->close();
+											$conn->close();
 
-										?>
-										
-									</tbody>
-									</form>
-								</table>
+											?>
+
+										</tbody>
+
+									</table>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -232,16 +284,14 @@ require "header.php";
 </div>
 
 
+<!-- Javascript -->
+<script src=" assets/plugins/popper.min.js">
+</script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
+<!-- Page Specific JS -->
+<script src="assets/js/app.js"></script>
 
-										<!-- Javascript -->
-										<script src=" assets/plugins/popper.min.js">
-										</script>
-										<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
-										<!-- Page Specific JS -->
-										<script src="assets/js/app.js"></script>
-
-										</body>
-
-										</html>
+</html>
