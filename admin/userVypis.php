@@ -45,18 +45,16 @@ require "config.php";
 									<div class="col-auto">
 										<div class="col-auto">
 										</div>
-										<div class="col-auto">
-											<input type="text" name="hledanaFraze" id="search-orders" class="form-control search-orders" placeholder="Hledaný výraz">
+
+										<div class="col-auto" style="padding-left: 7px">
+											<input type="text" name="hledanaFraze" id="search-orders" class="form-control search-orders" style="height: 38px;" placeholder="Hledaný výraz">
 										</div>
 									</div>
-
-
 
 									<div class="col-auto">
 									</div>
 									<div class="col-auto">
 										<button type="submit" name="userSubmitSearch" class="btn app-btn-secondary">Hledej</button>
-
 									</div>
 								</form>
 
@@ -76,13 +74,9 @@ require "config.php";
 							?>
 
 						</div>
-						<!--//row-->
 					</div>
-					<!--//table-utilities-->
 				</div>
-				<!--//col-auto-->
 			</div>
-			<!--//row-->
 
 			<div class=" tab-content" id="orders-table-tab-content">
 				<div class=" tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
@@ -130,7 +124,6 @@ require "config.php";
 														exit;
 												}
 
-												// vypis hledaných uživatelů
 												$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE $hledanyTyp LIKE ?";
 												$stmt = $conn->prepare($query);
 												$stmt->bind_param('s', $hledanaFraze); // s = string, i = integer, d = double, b = blob
@@ -200,8 +193,6 @@ require "config.php";
 											?>
 
 											<?php
-
-
 											// výpis uživatelů, nezobrazuje se když POST hledání  -----------------------------
 											if (!isset($_POST["userSubmitSearch"])) {
 											?>
@@ -221,16 +212,11 @@ require "config.php";
 										<tbody>
 
 											<?php
-
-
-
 												$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
 												$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
-
-
 												while ($stmt->fetch()) { ?>
 
 
@@ -257,14 +243,14 @@ require "config.php";
 											?>
 
 											<tr>
-												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button>
-												</td>
+												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
 											<tr>
 											<?php
 											}
+											?>
 
 
-
+											<?php
 											$stmt->close();
 											$conn->close();
 
