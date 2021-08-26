@@ -32,7 +32,7 @@ require "config.php";
 				<div class="col-auto">
 					<div class="page-utilities">
 						<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
-							<div class="col-auto">
+							<div class="col-auto" style="padding-right: 7px">
 								<form action=" userVypis.php" method="post" class="table-search-form row gx-1 align-items-center">
 									<select name="hledanyTyp" class="form-select w-auto">
 
@@ -46,7 +46,7 @@ require "config.php";
 										<div class="col-auto">
 										</div>
 
-										<div class="col-auto" style="padding-left: 7px">
+										<div class="col-auto">
 											<input type="text" name="hledanaFraze" id="search-orders" class="form-control search-orders" style="height: 38px;" placeholder="Hledaný výraz">
 										</div>
 									</div>

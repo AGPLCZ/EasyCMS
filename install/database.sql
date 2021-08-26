@@ -1,4 +1,4 @@
-CREATE DATABASE `databaze_pro_web` CHARACTER SET utf8 COLLATE utf8_czech_ci;
+CREATE DATABASE `konstrakt` CHARACTER SET utf8 COLLATE utf8_czech_ci;
 
     
 --

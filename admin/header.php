@@ -50,7 +50,6 @@ if (!isset($_SESSION['userId'])) {
 
             <!--//col-->
             <div class="col-auto">
-              Redakční systém
 
 
             </div>
@@ -214,7 +213,7 @@ if (!isset($_SESSION['userId'])) {
       <div class="sidepanel-inner d-flex flex-column">
         <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
         <div class="app-branding">
-          <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">Administrace</span></a>
+          <a class="app-logo" href="index.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">Administrace</span></a>
 
         </div>
         <!--//app-branding-->
