@@ -1,6 +1,6 @@
 <?php
-require "header.php";
-require "config.php";
+require_once "header.php";
+require_once "config.php";
 ?>
 
 <div class="app-wrapper">
@@ -89,7 +89,7 @@ require "config.php";
 										<thead>
 											<tr>
 											<tr>
-												<td colspan="9">
+												<td colspan="8">
 
 													<div class="col-auto">
 														<a class="btn app-btn-secondary" href="userNew.php">
@@ -100,6 +100,27 @@ require "config.php";
 															Vytvořit nového uživatele
 														</a>
 													</div>
+												</td>
+												<td>
+
+													<?php
+													$seradit = "od_nejmensiho";
+
+													if (isset($_GET["seradit"])) {
+														$seradit = $_GET["seradit"];
+													}
+
+
+													if ($seradit == "od_nejmensiho") {
+
+
+														echo '<a href="userVypis.php?seradit=od_nejvetsiho"> Seřadit od  nejnovějšího</a>';
+													} else {
+
+														echo '<a href="userVypis.php?seradit=od_nejmensiho"> Seřadit od nejstaršího</a>';
+													}
+
+													?>
 												</td>
 											</tr>
 
@@ -195,6 +216,8 @@ require "config.php";
 											<?php
 											// výpis uživatelů, nezobrazuje se když POST hledání  -----------------------------
 											if (!isset($_POST["userSubmitSearch"])) {
+
+
 											?>
 
 											<tr>
@@ -212,7 +235,23 @@ require "config.php";
 										<tbody>
 
 											<?php
-												$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId";
+
+
+
+												$seradit = "od_nejmensiho";
+
+
+												if (isset($_GET["seradit"])) {
+													$seradit = $_GET["seradit"];
+												}
+
+
+												if ($seradit == "od_nejmensiho") {
+													$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId ASC";
+												} else {
+													$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId DESC";
+												}
+
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
