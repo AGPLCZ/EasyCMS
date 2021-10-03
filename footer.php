@@ -11,7 +11,7 @@
 
                 <div class="feature col">
                     <h3 class="fs-5 text-start text-light lh-base">NABÍZÍME</h3>
-                    <ul class="list-group fs-6 " style="color:  #FAEBD7">
+                    <ul class="list-group fs-6 " style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">VÝLETY</li>
                         <li class="d-flex  fw-light lh-base ">EXPEDICE</li>
                         <li class="d-flex  fw-light lh-base ">KURZY</li>
@@ -21,7 +21,7 @@
 
                 <div class="feature col">
                     <h3 class="fs-5 text-start text-light  lh-base">SYMBOLIZUJE NÁS</h3>
-                    <ul class="list-group fs-6 text-light">
+                    <ul class="list-group fs-6" style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">DOBRODRUŽSTVÍ</li>
                         <li class="d-flex  fw-light lh-base ">PŘÍRODA</li>
                         <li class="d-flex  fw-light lh-base ">KAMARÁDI</li>
@@ -31,7 +31,7 @@
 
                 <div class="feature col">
                     <h3 class="fs-5 text-start text-light  lh-base">NAŠE HODNOTY</h3>
-                    <ul class="list-group fs-6 text-light">
+                    <ul class="list-group fs-6" style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">SVOBODA</li>
                         <li class="d-flex  fw-light lh-base ">RESPEKT</li>
                         <li class="d-flex  fw-light lh-base ">ZODPOVĚDNOST</li>
@@ -41,7 +41,7 @@
 
                 <div class="feature col">
                     <h3 class="fs-5 text-start text-light lh-base">PRINCIPY</h3>
-                    <ul class="list-group fs-6 text-light">
+                    <ul class="list-group fs-6" style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">ÚČEL NESVĚTÍ PROSTŘEDKY</li>
                         <li class="d-flex  fw-light lh-base ">OBOUSTRANNÁ DOHODA</li>
                         <li class="d-flex  fw-light lh-base ">NENÁSILNÁ KOMUNIKACE</li>

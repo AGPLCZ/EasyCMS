@@ -4,6 +4,32 @@ require_once  "header.php";
 
 $pageName = basename($_SERVER['PHP_SELF'], '.php');
 
+
+$query2 = "SELECT stitkyId, stitkyName  FROM stitky WHERE stitkyId";
+$result2 = $conn->query($query2);
+
+if (!$result2) {
+    return false;
+}
+
+$vsechnyStitky = 0;
+while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
+    $stitkyId = $row2['stitkyId'];
+    $stitkyName = $row2['stitkyName'];
+    $vsechnyStitky = $vsechnyStitky . ',' . $stitkyId;
+}
+
+
+$stitky = $vsechnyStitky;
+
+
+
+
+if (isset($_GET["stitky"])) {
+    $stitky = ($_GET["stitky"]);
+}
+
+
 if (isset($_GET["posledniId"])) {
 
     $posledniId = ($_GET["posledniId"]);
@@ -13,15 +39,29 @@ if (isset($_GET["posledniId"])) {
 
 
 
+
+
+
 $limit = 8;
 
-$query = "SELECT galerieId, galerieTitle, galeriePerex, galerieHref, galerieOut, galerieImg FROM galerie WHERE galerieId > $posledniId LIMIT $limit";
+$query = "SELECT galerieId, directorId, galerieTitle, galeriePerex, galerieHref, galerieOut, galerieImg FROM galerie WHERE directorId IN ($stitky) AND galerieId > $posledniId LIMIT $limit";
 $result = $conn->query($query);
 
 if (!$result) {
     return false;
 }
 
+
+
+
+
+/*
+
+
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price = 22);
+*/
 
 ?>
 
@@ -32,8 +72,34 @@ if (!$result) {
 <main>
 
 
+
     <div class="container px-4 py-5" id="featured-3">
         <h2 class="pb-2 "></h2>
+
+        <a class="btn btn-secondary" href="?stitky=<?php echo $vsechnyStitky ?>">Všechny kategorie</a>
+        <?php
+
+        $query2 = "SELECT stitkyId, stitkyName  FROM stitky WHERE stitkyId";
+        $result2 = $conn->query($query2);
+
+        if (!$result2) {
+            return false;
+        }
+
+        while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
+            $stitkyId = $row2['stitkyId'];
+            $stitkyName = $row2['stitkyName'];
+
+
+            echo ' <a class="btn btn-primary" href="?stitky=' . $stitkyId . '">' . $stitkyName . '</a>';
+        }
+
+
+
+        ?>
+
+
+
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
 
 

@@ -16,20 +16,19 @@ CREATE TABLE `users` (
 
 
 
-CREATE TABLE `articlesimg` (
-  `artId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `artTitle` varchar(128) NOT NULL,
-  `artPerex` varchar(255) NOT NULL,
-  `artText` varchar(255) NOT NULL,
-  `artHref` varchar(128) NOT NULL,
-  `artImg` varchar(128) NOT NULL
-  ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
-
 
 CREATE TABLE `galerie` (
   `galerieId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `directorId` int(11) NOT NULL,
   `galerieTitle` varchar(128) NOT NULL,
   `galeriePerex` varchar(255) NOT NULL,
   `galerieHref` varchar(128) NOT NULL,
-  `galerieImg` varchar(128) NOT NULL
+    `galerieOut` varchar(128) NOT NULL,
+  `galerieImg` varchar(128) NOT NULL,
+  FOREIGN KEY (directorId) REFERENCES stitky(stitkyId)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
+
+  CREATE TABLE `stitky` (
+  `stitkyId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `stitkyName` varchar(128) NOT NULL,
   ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
