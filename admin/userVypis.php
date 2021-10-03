@@ -1,6 +1,8 @@
 <?php
 require_once "header.php";
 require_once "config.php";
+
+$pageName = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 
 <div class="app-wrapper">
@@ -33,7 +35,7 @@ require_once "config.php";
 					<div class="page-utilities">
 						<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
 							<div class="col-auto" style="padding-right: 7px">
-								<form action=" userVypis.php" method="post" class="table-search-form row gx-1 align-items-center">
+								<form action="<?php echo $pageName ?>.php" method="post" class="table-search-form row gx-1 align-items-center">
 									<select name="hledanyTyp" class="form-select w-auto">
 
 										<option value="userLogin">Uživatelské jméno</option>
@@ -62,14 +64,19 @@ require_once "config.php";
 							<?php
 							if (isset($_POST["userSubmitSearch"])) {
 
-								echo '<div class="col-auto">
-								<a class="btn app-btn-secondary" href="userVypis.php">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
-										<path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-									</svg>
-									zobrazit všechny uživatele
-								</a>
-							</div>';
+							?>
+
+
+								<div class="col-auto">
+									<a class="btn app-btn-secondary" href="<?php echo $pageName ?>.php">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+										</svg>
+										zobrazit všechny uživatele
+									</a>
+								</div>
+
+							<?php
 							}
 							?>
 
@@ -83,7 +90,7 @@ require_once "config.php";
 					<div class="app-card app-card-orders-table shadow-sm mb-5">
 						<div class="app-card-body">
 							<div class="table-responsive">
-								<form action="userVypis.php" method="post">
+								<form action="<?php echo $pageName ?>.php" method="post">
 									<table class=" table app-table-hover mb-0 text-left">
 
 										<thead>
@@ -114,10 +121,10 @@ require_once "config.php";
 													if ($seradit == "od_nejmensiho") {
 
 
-														echo '<a href="userVypis.php?seradit=od_nejvetsiho"> Seřadit od  nejnovějšího</a>';
+														echo '<a href="' . $pageName . '.php?seradit=od_nejvetsiho"> Seřadit od  nejnovějšího</a>';
 													} else {
 
-														echo '<a href="userVypis.php?seradit=od_nejmensiho"> Seřadit od nejstaršího</a>';
+														echo '<a href="' . $pageName . '.php?seradit=od_nejmensiho"> Seřadit od nejstaršího</a>';
 													}
 
 													?>
