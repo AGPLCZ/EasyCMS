@@ -28,7 +28,10 @@ CREATE TABLE `galerie` (
   FOREIGN KEY (directorId) REFERENCES stitky(stitkyId)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
 
+
+
   CREATE TABLE `stitky` (
   `stitkyId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `stitkyName` varchar(128) NOT NULL,
   ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
+

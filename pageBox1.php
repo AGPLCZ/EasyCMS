@@ -79,7 +79,7 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <p><i class="fas fas fa-eye text-primary    " style="font-size: 45px"></i></p>
+                <p><i class="fas fas fa-eye text-primary" style="font-size: 45px"></i></p>
 
                 <h2>Heading</h2>
                 <p class="fw-light">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>

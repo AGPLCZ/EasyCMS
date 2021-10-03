@@ -13,7 +13,8 @@ if (isset($_POST["userSubmit"])) {
 
 
 	// KONTROLA ZADÁVÁNÍ    
-	$jmenoSouboru = 'userNew';
+	$jmenoSouboru = basename($_SERVER['PHP_SELF'], '.php');
+
 
 	// není-li prázdné pole
 	if (empty($userLogin) || empty($userPass) || empty($userEmail)) {
@@ -83,7 +84,7 @@ require "header.php";
 	<div class="app-content pt-3 p-md-3 p-lg-4">
 		<div class="container-xl">
 
-			<div class="row g-3 mb-4 align-items-center justify-content-between">
+			<div class="row g-3 mb-4 align-items-center mt-4 justify-content-between">
 				<div class="col-auto">
 					<h1 class="app-page-title mb-0">Uživatel</h1>
 				</div>
