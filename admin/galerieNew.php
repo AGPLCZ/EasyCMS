@@ -167,13 +167,28 @@ require "header.php";
 													<input type="text" name="galerieTitle" class="form-control" placeholder="Název galerie">
 												</div>
 
+
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Štítek</label>
 													<select type="select" name="directorId" class="form-control">
-														<option value="1">1</option>
-														<option value="5">5</option>
+
+
+														<?php
+														$query2 = "SELECT stitkyId, stitkyName FROM stitky ORDER BY stitkyId DESC";
+														$stmt2 = $conn->stmt_init();
+														$stmt2->prepare($query2);
+														$stmt2->execute();
+														$stmt2->bind_result($stitkyId, $stitkyName);
+
+														while ($stmt2->fetch()) {
+														?>
+															<option value="<?php echo $stitkyId ?>"><?php echo $stitkyName ?></option>
+
+														<?php 	}  ?>
 													</select>
 												</div>
+
+
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Perex</label>
 													<input type="text" name="galeriePerex" class="form-control" placeholder="Perex">
