@@ -63,7 +63,7 @@ if (isset($_POST["userSubmit"])) {
 	$stmt->bind_param('ssssss', $userLogin, $userPassHash, $userEmail, $userNickName, $userFirstName, $userLastName);
 
 	if ($stmt->execute()) {
-		header("Location: userRegistrace.php?odeslano=zapsano");
+		header("Location: " . BASE_URL . namePage() . ".php?odeslano=zapsano");
 		$stmt->close();
 		$conn->close();
 		exit;

@@ -1,4 +1,4 @@
-CREATE DATABASE `konstrakt` CHARACTER SET utf8 COLLATE utf8_czech_ci;
+CREATE DATABASE `konstrakt` CHARACTER SET utf8;
 
     
 --
@@ -12,26 +12,26 @@ CREATE TABLE `users` (
   `userNickName` varchar(128) NOT NULL,
   `userFirstName` varchar(128) NOT NULL,
   `userLastName` varchar(128) NOT NULL
-  ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
 
 CREATE TABLE `galerie` (
   `galerieId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `directorId` int(11) NOT NULL,
+  `rubrikyId` int(11) NOT NULL,
   `galerieTitle` varchar(128) NOT NULL,
   `galeriePerex` varchar(255) NOT NULL,
   `galerieHref` varchar(128) NOT NULL,
     `galerieOut` varchar(128) NOT NULL,
   `galerieImg` varchar(128) NOT NULL,
-  FOREIGN KEY (directorId) REFERENCES stitky(stitkyId)
-  ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
+  FOREIGN KEY (rubrikyId) REFERENCES rubriky(rubrikyId)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
-  CREATE TABLE `stitky` (
-  `stitkyId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `stitkyName` varchar(128) NOT NULL,
-  ) ENGINE=InnoDB DEFAULT CHARSET=latin2 COLLATE=latin2_czech_cs;
 
+CREATE TABLE `rubriky` (
+  `rubrikyId` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `rubrikyName` varchar(128) CHARACTER SET latin2 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

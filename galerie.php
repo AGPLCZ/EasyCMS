@@ -5,28 +5,28 @@ require_once  "header.php";
 $pageName = basename($_SERVER['PHP_SELF'], '.php');
 
 
-$query2 = "SELECT stitkyId, stitkyName  FROM stitky WHERE stitkyId";
+$query2 = "SELECT rubrikyId, rubrikyName  FROM rubriky WHERE rubrikyId";
 $result2 = $conn->query($query2);
 
 if (!$result2) {
     return false;
 }
 
-$vsechnyStitky = 0;
+$vsechnyrubriky = 0;
 while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-    $stitkyId = $row2['stitkyId'];
-    $stitkyName = $row2['stitkyName'];
-    $vsechnyStitky = $vsechnyStitky . ',' . $stitkyId;
+    $rubrikyId = $row2['rubrikyId'];
+    $rubrikyName = $row2['rubrikyName'];
+    $vsechnyrubriky = $vsechnyrubriky . ',' . $rubrikyId;
 }
 
 
-$stitky = $vsechnyStitky;
+$rubriky = $vsechnyrubriky;
 
 
 
 
-if (isset($_GET["stitky"])) {
-    $stitky = ($_GET["stitky"]);
+if (isset($_GET["rubriky"])) {
+    $rubriky = ($_GET["rubriky"]);
 }
 
 
@@ -44,7 +44,7 @@ if (isset($_GET["posledniId"])) {
 
 $limit = 8;
 
-$query = "SELECT galerieId, directorId, galerieTitle, galeriePerex, galerieHref, galerieOut, galerieImg FROM galerie WHERE directorId IN ($stitky) AND galerieId > $posledniId LIMIT $limit";
+$query = "SELECT galerieId, rubrikyId, galerieTitle, galeriePerex, galerieHref, galerieOut, galerieImg FROM galerie WHERE rubrikyId IN ($rubriky) AND galerieId > $posledniId LIMIT $limit";
 $result = $conn->query($query);
 
 if (!$result) {
@@ -76,10 +76,10 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
     <div class="container px-4 py-5" id="featured-3">
         <h2 class="pb-2 "></h2>
 
-        <a class="btn btn-secondary" href="?stitky=<?php echo $vsechnyStitky ?>">Všechny kategorie</a>
+        <a class="btn btn-secondary" href="?rubriky=<?php echo $vsechnyrubriky ?>">Všechny kategorie</a>
         <?php
 
-        $query2 = "SELECT stitkyId, stitkyName  FROM stitky WHERE stitkyId";
+        $query2 = "SELECT rubrikyId, rubrikyName  FROM rubriky WHERE rubrikyId";
         $result2 = $conn->query($query2);
 
         if (!$result2) {
@@ -87,11 +87,11 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
         }
 
         while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-            $stitkyId = $row2['stitkyId'];
-            $stitkyName = $row2['stitkyName'];
+            $rubrikyId = $row2['rubrikyId'];
+            $rubrikyName = $row2['rubrikyName'];
 
 
-            echo ' <a class="btn btn-primary" href="?stitky=' . $stitkyId . '">' . $stitkyName . '</a>';
+            echo ' <a class="btn btn-primary" href="?rubriky=' . $rubrikyId . '">' . $rubrikyName . '</a>';
         }
 
 

@@ -1,9 +1,12 @@
-<?php require "config.php"; ?>
+<?php
+require "config.php";
+
+?>
 
 <?php
+$cesta = BASE_URL;
 
-
-$query2 = "SELECT galerieId, directorId FROM galerie WHERE galerieId";
+$query2 = "SELECT galerieId, rubrikyId FROM galerie WHERE galerieId";
 $result2 = $conn->query($query2);
 
 if (!$result2) {
@@ -12,7 +15,7 @@ if (!$result2) {
 
 while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
 	$galerieId = $row2['galerieId'];
-	$directorId = $row2['directorId'];
+	$rubrikyId = $row2['rubrikyId'];
 }
 
 
@@ -20,7 +23,7 @@ while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
 if (isset($_POST["galerieSubmit"])) {
 
 	$galerieTitle = $_POST["galerieTitle"];
-	$directorId = $_POST["directorId"];
+	$rubrikyId = $_POST["rubrikyId"];
 	$galeriePerex = $_POST["galeriePerex"];
 	$galerieHref = $_POST["galerieHref"];
 	$galerieOut = $_POST["galerieOut"];
@@ -28,15 +31,15 @@ if (isset($_POST["galerieSubmit"])) {
 
 
 	// Vlož do databáze proměnné z formuláře
-	$query = "INSERT INTO galerie(directorId,galerieTitle,galeriePerex,galerieHref,galerieOut,galerieImg) VALUES(?,?,?,?,?,?)";
-	//$query = "INSERT INTO galerie(directorId) VALUES(?)";
+	$query = "INSERT INTO galerie(rubrikyId,galerieTitle,galeriePerex,galerieHref,galerieOut,galerieImg) VALUES(?,?,?,?,?,?)";
+	//$query = "INSERT INTO galerie(rubrikyId) VALUES(?)";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($query);
-	$stmt->bind_param('isssss', $directorId, $galerieTitle, $galeriePerex, $galerieHref, $galerieOut, $galerieImg);
-	//$stmt->bind_param('i', $directorId);
+	$stmt->bind_param('isssss', $rubrikyId, $galerieTitle, $galeriePerex, $galerieHref, $galerieOut, $galerieImg);
+	//$stmt->bind_param('i', $rubrikyId);
 
 	if ($stmt->execute()) {
-		header("Location: galerieNew.php?odeslano=zapsano");
+		header("Location: " . BASE_URL . namePage() . ".php?odeslano=zapsano");
 		$stmt->close();
 		$conn->close();
 		exit;
@@ -48,12 +51,11 @@ if (isset($_POST["galerieSubmit"])) {
 
 
 	// KONTROLA ZADÁVÁNÍ    
-	$jmenoSouboru = basename($_SERVER['PHP_SELF'], '.php');
 
 
 	// není-li prázdné pole
-	if (empty($directorId)) {
-		header("Location: " . $jmenoSouboru . ".php?error=prazdne");
+	if (empty($rubrikyId)) {
+		header("Location: " . BASE_URL . namePage()  . ".php?error=prazdne");
 		exit();
 	}
 }
@@ -125,6 +127,7 @@ require "header.php";
 
 
 
+
 												// GET ODESLÁNO
 												if (isset($_GET["odeslano"])) {
 
@@ -170,19 +173,19 @@ require "header.php";
 
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Štítek</label>
-													<select type="select" name="directorId" class="form-control">
+													<select type="select" name="rubrikyId" class="form-control">
 
 
 														<?php
-														$query2 = "SELECT stitkyId, stitkyName FROM stitky ORDER BY stitkyId DESC";
+														$query2 = "SELECT rubrikyId, rubrikyName FROM rubriky ORDER BY rubrikyId DESC";
 														$stmt2 = $conn->stmt_init();
 														$stmt2->prepare($query2);
 														$stmt2->execute();
-														$stmt2->bind_result($stitkyId, $stitkyName);
+														$stmt2->bind_result($rubrikyId, $rubrikyName);
 
 														while ($stmt2->fetch()) {
 														?>
-															<option value="<?php echo $stitkyId ?>"><?php echo $stitkyName ?></option>
+															<option value="<?php echo $rubrikyId ?>"><?php echo $rubrikyName ?></option>
 
 														<?php 	}  ?>
 													</select>

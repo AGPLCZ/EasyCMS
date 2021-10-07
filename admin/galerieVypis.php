@@ -100,16 +100,16 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 
 
 
-												$query = "SELECT galerieId, directorId, galerieTitle FROM galerie ORDER BY galerieId DESC";
+												$query = "SELECT galerieId, rubrikyId, galerieTitle FROM galerie ORDER BY galerieId DESC";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
-												$stmt->bind_result($galerieId, $directorId, $galerieTitle);
+												$stmt->bind_result($galerieId, $rubrikyId, $galerieTitle);
 												while ($stmt->fetch()) { ?>
 													<tr>
 														<td class="cell"><input type="checkbox" name="galerieDel[]" value="<?php echo $galerieId ?>"></td>
 														<td class=" cell"><span class="cell-data"><?php echo $galerieId ?></span><span class="note">galerieId</span></td>
-														<td class=" cell"><span class="cell-data"><?php echo $directorId ?></span><span class="note">directorId</span></td>
+														<td class=" cell"><span class="cell-data"><?php echo $rubrikyId ?></span><span class="note">rubrikyId</span></td>
 														<td class="cell"><?php echo $galerieTitle ?></td>
 
 														<td class="cell"><a class="btn btn-outline-secondary" href="galerieUpdate.php?galerieUpdateId=<?php echo $galerieId ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
