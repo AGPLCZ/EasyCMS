@@ -209,12 +209,15 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 											// smazat uživatele
 											if (isset($_POST["userSubmitDel"])) {
 
-												foreach ($_POST['userDel'] as $userDel) {
-													$query = ("DELETE FROM users WHERE userId=?");
-													$stmt = $conn->stmt_init();
-													$stmt->prepare($query);
-													$stmt->bind_param('s', $userDel);
-													$stmt->execute();
+												if (isset($_POST['userDel'])) {
+
+													foreach ($_POST['userDel'] as $userDel) {
+														$query = ("DELETE FROM users WHERE userId=?");
+														$stmt = $conn->stmt_init();
+														$stmt->prepare($query);
+														$stmt->bind_param('s', $userDel);
+														$stmt->execute();
+													}
 												}
 											}
 

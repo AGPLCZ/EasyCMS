@@ -1,15 +1,49 @@
 <?php require "config.php"; ?>
 
 <?php
-$directorId = 1;
 
 
+$query2 = "SELECT galerieId, directorId FROM galerie WHERE galerieId";
+$result2 = $conn->query($query2);
+
+if (!$result2) {
+	return false;
+}
+
+while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
+	$galerieId = $row2['galerieId'];
+	$directorId = $row2['directorId'];
+}
 
 
 
 if (isset($_POST["galerieSubmit"])) {
 
-	$directorId = $_POST["galerieTitle"];
+	$galerieTitle = $_POST["galerieTitle"];
+	$directorId = $_POST["directorId"];
+	$galeriePerex = $_POST["galeriePerex"];
+	$galerieHref = $_POST["galerieHref"];
+	$galerieOut = $_POST["galerieOut"];
+	$galerieImg = $_POST["galerieImg"];
+
+
+	// Vlož do databáze proměnné z formuláře
+	$query = "INSERT INTO galerie(directorId,galerieTitle,galeriePerex,galerieHref,galerieOut,galerieImg) VALUES(?,?,?,?,?,?)";
+	//$query = "INSERT INTO galerie(directorId) VALUES(?)";
+	$stmt = $conn->stmt_init();
+	$stmt->prepare($query);
+	$stmt->bind_param('isssss', $directorId, $galerieTitle, $galeriePerex, $galerieHref, $galerieOut, $galerieImg);
+	//$stmt->bind_param('i', $directorId);
+
+	if ($stmt->execute()) {
+		header("Location: galerieNew.php?odeslano=zapsano");
+		$stmt->close();
+		$conn->close();
+		exit;
+	} else {
+		die('Chyba : (' . $mysqli->errno . ') ' . $mysqli->error);
+	}
+
 
 
 
@@ -22,18 +56,9 @@ if (isset($_POST["galerieSubmit"])) {
 		header("Location: " . $jmenoSouboru . ".php?error=prazdne");
 		exit();
 	}
-
-
-
-
-	$sql = "INSERT INTO galerie(directorId)VALUES('$directorId')";
-
-	$odeslat =  mysqli_query($conn, $sql);
-
-	if (!$odeslat) {
-		die("Dotaz do databáze selhal");
-	}
 }
+
+
 
 
 
@@ -52,26 +77,8 @@ require "header.php";
 
 			<div class="row g-3 mb-4 align-items-center mt-4 justify-content-between">
 				<div class="col-auto">
-					<h1 class="app-page-title mb-0">Štítky</h1>
+					<h1 class="app-page-title mb-0">Nový záznam galerie</h1>
 
-					<?php
-
-					$query2 = "SELECT galerieId, directorId FROM galerie WHERE galerieId";
-					$result2 = $conn->query($query2);
-
-					if (!$result2) {
-						return false;
-					}
-
-					while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-						$galerieId = $row2['galerieId'];
-						$directorId = $row2['directorId'];
-
-						echo $galerieId;
-						echo $directorId;
-						echo "<br>";
-					}
-					?>
 
 
 
@@ -154,55 +161,85 @@ require "header.php";
 												}
 
 
-
-												echo '<div class="mb-3">
-												<label for="setting-input-1" class="form-label">Název nového štítku</label>';
-
-												// Zobraz podle GET input
-												if (isset($_GET["galerieTitle"])) {
-													echo '<input type="text" name="galerieTitle" class="form-control" placeholder="Název štítku" value="' . $_GET["galerieTitle"] . '">';
-												} else {
-													echo '<input type="text" name="galerieTitle" class="form-control" placeholder="Název štítku">';
-												}
-												echo '</div>';
-
-												echo '
-
-												<button type="submit" name="galerieSubmit" class="btn app-btn-primary">Vytvořit nový štítek</button>
-												';
-
-
 												?>
-											</form>
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Nadpis</label>
+													<input type="text" name="galerieTitle" class="form-control" placeholder="Název galerie">
+												</div>
+
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Štítek</label>
+													<select type="select" name="directorId" class="form-control">
+														<option value="1">1</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Perex</label>
+													<input type="text" name="galeriePerex" class="form-control" placeholder="Perex">
+
+												</div>
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Odkaz na obrázek</label>
+													<input type="text" name="galerieImg" class="form-control" placeholder="img/article/1.png" value="img/article/1.png">
+												</div>
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Cesta odkazu</label>
+													<input type="text" name="galerieHref" class="form-control" placeholder="Cesta odkazu" value="https://dobrodruzi.club/sekce-pro-dobrodruhy/">
+												</div>
+												<div class="mb-3">
+													<label for="setting-input-1" class="form-label">Cesta odkazu</label>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="galerieOut" id="exampleRadios1" value='target=" _blank"' checked>
+														<label class="form-check-label" for="exampleRadios1">Otevřít v novém okně</label>
+													</div>
+
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="galerieOut" id="exampleRadios2" value="">
+														<label class="form-check-label" for="exampleRadios2">Otevřív v okně</label>
+													</div>
+
+												</div>
+
 										</div>
+										<div class="mb-3">
+
+											<button type="submit" name="galerieSubmit" class="btn app-btn-primary">Vytvořit nový štítek</button>
+										</div>
+
+
+
+
+										</form>
 									</div>
 								</div>
-
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<footer class="app-footer">
-			<div class="container text-center py-3">
-				<small class="copyright">Redakční systém Konstrakt</small>
-
-			</div>
-		</footer>
-
 	</div>
 
+	<footer class="app-footer">
+		<div class="container text-center py-3">
+			<small class="copyright">Redakční systém Konstrakt</small>
 
-	<!-- Javascript -->
-	<script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		</div>
+	</footer>
+
+</div>
 
 
-	<!-- Page Specific JS -->
-	<script src="assets/js/app.js"></script>
+<!-- Javascript -->
+<script src="assets/plugins/popper.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-	</body>
 
-	</html>
+<!-- Page Specific JS -->
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

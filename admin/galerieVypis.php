@@ -44,7 +44,7 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 											<thead>
 												<tr>
 												<tr>
-													<td colspan="4">
+													<td colspan="5">
 
 														<div class="col-auto">
 															<a class="btn app-btn-secondary" href="galerieNew.php">
@@ -66,12 +66,16 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 												// smazat uživatele
 												if (isset($_POST["galerieSubmitDel"])) {
 
-													foreach ($_POST['galerieDel'] as $galerieDel) {
-														$query = ("DELETE FROM galerie WHERE galerieId=?");
-														$stmt = $conn->stmt_init();
-														$stmt->prepare($query);
-														$stmt->bind_param('s', $galerieDel);
-														$stmt->execute();
+													if (isset($_POST['galerieDel'])) {
+
+
+														foreach ($_POST['galerieDel'] as $galerieDel) {
+															$query = ("DELETE FROM galerie WHERE galerieId=?");
+															$stmt = $conn->stmt_init();
+															$stmt->prepare($query);
+															$stmt->bind_param('s', $galerieDel);
+															$stmt->execute();
+														}
 													}
 												}
 												?>
@@ -80,6 +84,7 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 												<tr>
 													<th class="cell"></th>
 													<th class="cell">ID</th>
+													<th class="cell">Štítek ID</th>
 													<th class="cell">Název</th>
 													<th class="cell">Akce</th>
 
@@ -95,15 +100,16 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 
 
 
-												$query = "SELECT galerieId, galerieTitle FROM galerie ORDER BY galerieId DESC";
+												$query = "SELECT galerieId, directorId, galerieTitle FROM galerie ORDER BY galerieId DESC";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
-												$stmt->bind_result($galerieId, $galerieTitle);
+												$stmt->bind_result($galerieId, $directorId, $galerieTitle);
 												while ($stmt->fetch()) { ?>
 													<tr>
 														<td class="cell"><input type="checkbox" name="galerieDel[]" value="<?php echo $galerieId ?>"></td>
 														<td class=" cell"><span class="cell-data"><?php echo $galerieId ?></span><span class="note">galerieId</span></td>
+														<td class=" cell"><span class="cell-data"><?php echo $directorId ?></span><span class="note">directorId</span></td>
 														<td class="cell"><?php echo $galerieTitle ?></td>
 
 														<td class="cell"><a class="btn btn-outline-secondary" href="galerieUpdate.php?galerieUpdateId=<?php echo $galerieId ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
