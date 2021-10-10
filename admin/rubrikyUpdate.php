@@ -1,8 +1,16 @@
 <?php require "config.php"; ?>
 
 <?php
-if (isset($_POST["rubrikySubmit"])) {
 
+
+if (isset($_GET["rubrikyUpdateId"])) {
+
+	$rubrikyUpdateId = $_GET['rubrikyUpdateId'];
+}
+
+
+if (isset($_POST["rubrikySubmit"])) {
+	$rubrikyId = $_POST["rubrikyId"];
 	$rubrikyName = $_POST["rubrikyName"];
 
 
@@ -26,30 +34,16 @@ if (isset($_POST["rubrikySubmit"])) {
 
 
 
-
-	// Kolik existuje v databázi záznamů - rubrikyLogin, 
-	$sql = "SELECT rubrikyName FROM rubriky WHERE rubrikyName=?";
-	$stmt = $conn->stmt_init();
-	$stmt->prepare($sql);
-	$stmt->bind_param("s", $rubrikyName);
-	$stmt->execute();
-	$stmt->store_result();
-
-	$resultCount = $stmt->num_rows();
-
-	if ($resultCount > 0) {
-		header("Location: rubrikyNew.php?error=existujiciUcet");
-		exit();
-	}
-
 	// Vlož do databáze proměnné z formuláře
-	$query = "INSERT INTO rubriky(rubrikyName) VALUES(?)";
+	$query = "UPDATE rubriky SET rubrikyName=?  WHERE rubrikyId=?";
+
+
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($query);
-	$stmt->bind_param('s', $rubrikyName);
+	$stmt->bind_param('ss', $rubrikyName, $rubrikyId);
 
 	if ($stmt->execute()) {
-		header("Location: " . BASE_URL . RUBRIKY_VYPIS . ".php?odeslano=vytvorena");
+		header("Location: " . BASE_URL . RUBRIKY_VYPIS . ".php?odeslano=upravena" . "&rubrikyUpdateId=" . $rubrikyId);
 		$stmt->close();
 		$conn->close();
 		exit;
@@ -71,7 +65,7 @@ require "header.php";
 
 			<div class="row g-3 mb-4 align-items-center mt-4 justify-content-between">
 				<div class="col-auto">
-					<h1 class="app-page-title mb-0">Štítky</h1>
+					<h1 class="app-page-title mb-0">Úprava rubriky</h1>
 				</div>
 				<div class="col-auto">
 					<a class="btn app-btn-secondary" href="rubrikyVypis.php">
@@ -106,7 +100,7 @@ require "header.php";
 									<div class="app-card app-card-settings shadow-sm p-4">
 
 										<div class="app-card-body">
-											<form action="rubrikyNew.php" method="post" class="form-signup">
+											<form action="rubrikyUpdate.php" method="post" class="form-signup">
 
 
 
@@ -117,13 +111,13 @@ require "header.php";
 												// GET ODESLÁNO
 												if (isset($_GET["odeslano"])) {
 
-													// Hláška z GET 
-													if ($_GET["odeslano"] == "vytvorena") {
+													// Hláška z GET - účet vytvořen
+													if ($_GET["odeslano"] == "upravana") {
 														echo '<p class="btn btn-warning">
 													
 															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
 															
-															Rubrika byla vytvořena</p>';
+															Rubrika byla upravena</p>';
 													}
 												}
 
@@ -149,19 +143,45 @@ require "header.php";
 													}
 												}
 
-
 												?>
 
 
+
 												<div class="mb-3">
-													<label for="setting-input-1" class="form-label">Název nového štítku</label>
+													<label for="setting-input-1" class="form-label">Název upravovaného štítku</label>
 
 
-													<input type="text" name="rubrikyName" class="form-control" placeholder="Název rubriky">
 
-												</div>
+													<?php
 
-												<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Vytvořit novou rubriku</button>
+
+
+
+
+
+													$queryRubrikyUpdate = "SELECT rubrikyId, rubrikyName FROM rubriky WHERE rubrikyId = $rubrikyUpdateId";
+													$resultRubrikyUpdate = $conn->query($queryRubrikyUpdate);
+
+													if (!$resultRubrikyUpdate) {
+														return false;
+													}
+
+													while ($row = $resultRubrikyUpdate->fetch_assoc()) {
+														$rubrikyIdSelect = $row['rubrikyId'];
+														$rubrikyNameSelect = $row['rubrikyName'];
+
+
+
+													?>
+
+														<input type="hidden" name="rubrikyId" placeholder="<?php echo $rubrikyIdSelect ?>" value="<?php echo $rubrikyIdSelect ?>">
+														<input type="text" name="rubrikyName" class="form-control" placeholder="<?php echo $rubrikyNameSelect ?>" value="<?php echo $rubrikyNameSelect ?>">
+
+													<?php 	} ?>
+
+
+
+													<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Vytvořit nový štítek</button>
 
 
 

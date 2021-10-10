@@ -13,4 +13,4 @@ if ($conn->connect_errno) {
 }
 
 
-require_once "function-all.php";
+require_once "function-master.php";

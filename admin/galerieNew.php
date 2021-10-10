@@ -39,7 +39,7 @@ if (isset($_POST["galerieSubmit"])) {
 	//$stmt->bind_param('i', $rubrikyId);
 
 	if ($stmt->execute()) {
-		header("Location: " . BASE_URL . namePage() . ".php?odeslano=zapsano");
+		header("Location: " . BASE_URL . GALERIE_VYPIS . ".php?odeslano=vytvorena");
 		$stmt->close();
 		$conn->close();
 		exit;

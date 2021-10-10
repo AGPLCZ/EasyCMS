@@ -6,7 +6,9 @@ function namePage()
 }
 
 
-
-
 define('BASE_URL', 'http://localhost/EasyCMS/EasyCMS/admin/');
 define('APP_PATH', realpath(__DIR__ . '/'));
+
+
+define('GALERIE_VYPIS', 'galerieVypis');
+define('RUBRIKY_VYPIS', 'rubrikyVypis');
