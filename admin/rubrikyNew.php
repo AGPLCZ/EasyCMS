@@ -3,7 +3,7 @@
 <?php
 if (isset($_POST["rubrikySubmit"])) {
 
-	$rubrikyName = $_POST["rubrikyName"];
+	$title = $_POST["title"];
 
 
 
@@ -12,14 +12,14 @@ if (isset($_POST["rubrikySubmit"])) {
 
 
 	// není-li prázdné pole
-	if (empty($rubrikyName)) {
+	if (empty($title)) {
 		header("Location: " . $jmenoSouboru . ".php?error=prazdne");
 		exit();
 	}
 
 
 	// pouze písmena a čísla
-	if (!preg_match("/^[a-zA-Z0-9]*$/", $rubrikyName)) {
+	if (!preg_match("/^[a-zA-Z0-9]*$/", $title)) {
 		header("Location: " . $jmenoSouboru . ".php?error=invalid");
 		exit();
 	}
@@ -28,10 +28,10 @@ if (isset($_POST["rubrikySubmit"])) {
 
 
 	// Kolik existuje v databázi záznamů - rubrikyLogin, 
-	$sql = "SELECT rubrikyName FROM rubriky WHERE rubrikyName=?";
+	$sql = "SELECT title FROM rubriky WHERE title=?";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($sql);
-	$stmt->bind_param("s", $rubrikyName);
+	$stmt->bind_param("s", $title);
 	$stmt->execute();
 	$stmt->store_result();
 
@@ -43,10 +43,10 @@ if (isset($_POST["rubrikySubmit"])) {
 	}
 
 	// Vlož do databáze proměnné z formuláře
-	$query = "INSERT INTO rubriky(rubrikyName) VALUES(?)";
+	$query = "INSERT INTO rubriky(title) VALUES(?)";
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($query);
-	$stmt->bind_param('s', $rubrikyName);
+	$stmt->bind_param('s', $title);
 
 	if ($stmt->execute()) {
 		header("Location: " . BASE_URL . RUBRIKY_VYPIS . ".php?odeslano=vytvorena");
@@ -157,7 +157,7 @@ require "header.php";
 													<label for="setting-input-1" class="form-label">Název nového štítku</label>
 
 
-													<input type="text" name="rubrikyName" class="form-control" placeholder="Název rubriky">
+													<input type="text" name="title" class="form-control" placeholder="Název rubriky">
 
 												</div>
 

@@ -10,8 +10,8 @@ if (isset($_GET["rubrikyUpdateId"])) {
 
 
 if (isset($_POST["rubrikySubmit"])) {
-	$rubrikyId = $_POST["rubrikyId"];
-	$rubrikyName = $_POST["rubrikyName"];
+	$id = $_POST["id"];
+	$title = $_POST["title"];
 
 
 
@@ -20,14 +20,14 @@ if (isset($_POST["rubrikySubmit"])) {
 
 
 	// není-li prázdné pole
-	if (empty($rubrikyName)) {
+	if (empty($title)) {
 		header("Location: " . $jmenoSouboru . ".php?error=prazdne");
 		exit();
 	}
 
 
 	// pouze písmena a čísla
-	if (!preg_match("/^[a-zA-Z0-9]*$/", $rubrikyName)) {
+	if (!preg_match("/^[a-zA-Z0-9]*$/", $title)) {
 		header("Location: " . $jmenoSouboru . ".php?error=invalid");
 		exit();
 	}
@@ -35,15 +35,15 @@ if (isset($_POST["rubrikySubmit"])) {
 
 
 	// Vlož do databáze proměnné z formuláře
-	$query = "UPDATE rubriky SET rubrikyName=?  WHERE rubrikyId=?";
+	$query = "UPDATE rubriky SET title=?  WHERE id=?";
 
 
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($query);
-	$stmt->bind_param('ss', $rubrikyName, $rubrikyId);
+	$stmt->bind_param('ss', $title, $id);
 
 	if ($stmt->execute()) {
-		header("Location: " . BASE_URL . RUBRIKY_VYPIS . ".php?odeslano=upravena" . "&rubrikyUpdateId=" . $rubrikyId);
+		header("Location: " . BASE_URL . RUBRIKY_VYPIS . ".php?odeslano=upravena" . "&rubrikyUpdateId=" . $id);
 		$stmt->close();
 		$conn->close();
 		exit;
@@ -159,7 +159,7 @@ require "header.php";
 
 
 
-													$queryRubrikyUpdate = "SELECT rubrikyId, rubrikyName FROM rubriky WHERE rubrikyId = $rubrikyUpdateId";
+													$queryRubrikyUpdate = "SELECT id, title FROM rubriky WHERE id = $rubrikyUpdateId";
 													$resultRubrikyUpdate = $conn->query($queryRubrikyUpdate);
 
 													if (!$resultRubrikyUpdate) {
@@ -167,22 +167,22 @@ require "header.php";
 													}
 
 													while ($row = $resultRubrikyUpdate->fetch_assoc()) {
-														$rubrikyIdSelect = $row['rubrikyId'];
-														$rubrikyNameSelect = $row['rubrikyName'];
+														$idSelect = $row['id'];
+														$nameSelect = $row['title'];
 
 
 
 													?>
 
-														<input type="hidden" name="rubrikyId" placeholder="<?php echo $rubrikyIdSelect ?>" value="<?php echo $rubrikyIdSelect ?>">
-														<input type="text" name="rubrikyName" class="form-control" placeholder="<?php echo $rubrikyNameSelect ?>" value="<?php echo $rubrikyNameSelect ?>">
+														<input type="hidden" name="id" placeholder="<?php echo $idSelect ?>" value="<?php echo $idSelect ?>">
+														<input type="text" name="title" class="form-control" placeholder="<?php echo $nameSelect ?>" value="<?php echo $nameSelect ?>">
 
 													<?php 	} ?>
 
+													<div class="mb-3">
 
-
-													<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Vytvořit nový štítek</button>
-
+														<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Upravit rubriku</button>
+													</div>
 
 
 

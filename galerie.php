@@ -5,7 +5,7 @@ require_once  "header.php";
 $pageName = basename($_SERVER['PHP_SELF'], '.php');
 
 
-$query2 = "SELECT rubrikyId, rubrikyName  FROM rubriky WHERE rubrikyId";
+$query2 = "SELECT id, title  FROM rubriky WHERE id";
 $result2 = $conn->query($query2);
 
 if (!$result2) {
@@ -14,9 +14,9 @@ if (!$result2) {
 
 $vsechnyrubriky = 0;
 while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-    $rubrikyId = $row2['rubrikyId'];
-    $rubrikyName = $row2['rubrikyName'];
-    $vsechnyrubriky = $vsechnyrubriky . ',' . $rubrikyId;
+    $id = $row2['id'];
+    $title = $row2['title'];
+    $vsechnyrubriky = $vsechnyrubriky . ',' . $id;
 }
 
 
@@ -44,7 +44,7 @@ if (isset($_GET["posledniId"])) {
 
 $limit = 8;
 
-$query = "SELECT galerieId, rubrikyId, galerieTitle, galeriePerex, galerieHref, galerieOut, galerieImg FROM galerie WHERE rubrikyId IN ($rubriky) AND galerieId > $posledniId LIMIT $limit";
+$query = "SELECT id, rubrikyId, title, perex, href, howOpen, img FROM galerie WHERE rubrikyId IN ($rubriky) AND id > $posledniId LIMIT $limit";
 $result = $conn->query($query);
 
 if (!$result) {
@@ -52,16 +52,6 @@ if (!$result) {
 }
 
 
-
-
-
-/*
-
-
-SELECT SupplierName
-FROM Suppliers
-WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price = 22);
-*/
 
 ?>
 
@@ -79,7 +69,8 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
         <a class="btn btn-secondary" href="?rubriky=<?php echo $vsechnyrubriky ?>">Všechny kategorie</a>
         <?php
 
-        $query2 = "SELECT rubrikyId, rubrikyName  FROM rubriky WHERE rubrikyId";
+
+        $query2 = "SELECT id, title  FROM rubriky WHERE id";
         $result2 = $conn->query($query2);
 
         if (!$result2) {
@@ -87,11 +78,11 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
         }
 
         while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-            $rubrikyId = $row2['rubrikyId'];
-            $rubrikyName = $row2['rubrikyName'];
+            $id = $row2['id'];
+            $title = $row2['title'];
 
 
-            echo ' <a class="btn btn-primary" href="?rubriky=' . $rubrikyId . '">' . $rubrikyName . '</a>';
+            echo ' <a class="btn btn-primary" href="?rubriky=' . $id . '">' . $title . '</a>';
         }
 
 
@@ -107,12 +98,12 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
             <?php
 
             while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                $galerieId = $row['galerieId'];
-                $galerieTitle = $row['galerieTitle'];
-                $galeriePerex = $row['galeriePerex'];
-                $galerieHref = $row['galerieHref'];
-                $galerieOut = $row['galerieOut'];
-                $galerieImg = $row['galerieImg'];
+                $id = $row['id'];
+                $title = $row['title'];
+                $perex = $row['perex'];
+                $href = $row['href'];
+                $howOpen = $row['howOpen'];
+                $img = $row['img'];
 
             ?>
 
@@ -122,18 +113,18 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
 
 
                 <div class="feature col">
-                    <p><img src="<?php echo $galerieImg; ?>" alt="" class="img-fluid" /></p>
-                    <h3 class="fs-5"><?php echo $galerieTitle; ?></h3>
-                    <p class="fw-light lh-base"><?php echo $galeriePerex; ?></p>
+                    <p><img src="<?php echo $img; ?>" alt="" class="img-fluid" /></p>
+                    <h3 class="fs-5"><?php echo $title; ?></h3>
+                    <p class="fw-light lh-base"><?php echo $perex; ?></p>
 
-                    <a class="btn btn-outline-secondary" href="<?php echo $galerieHref; ?>" <?php echo $galerieOut ?> role="button">Zobrazit</a>
+                    <a class="btn btn-outline-secondary" href="<?php echo $href; ?>" <?php echo $howOpen ?> role="button">Zobrazit</a>
                 </div>
 
 
 
 
             <?php
-                $posledniId = $galerieId;
+                $posledniId = $id;
 
                 /* konec cyklu */
             } ?>
@@ -152,11 +143,10 @@ WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppl
             echo '<li class="page-item disabled">';
         }
         ?>
-        <a class="page-link" href="<?php echo $pageName ?>.php">První stránka</a>
+        <a class="page-link" href="<?php echo BASE_URL_WEB . $pageName ?>.php">První stránka</a>
         </li>
         <li class="page-item">
-
-            <a class="page-link" href="<?php echo $pageName ?>.php?error=0&posledniId=<?php echo $posledniId; ?>">Zobrazit další</a>
+            <a class="page-link" href="<?php echo BASE_URL_WEB . $pageName; ?>.php?error=0&posledniId=<?php echo $posledniId; ?>">Zobrazit další</a>
         </li>
     </ul>
 </nav>

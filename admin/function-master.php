@@ -7,6 +7,7 @@ function namePage()
 
 
 define('BASE_URL', 'http://localhost/EasyCMS/EasyCMS/admin/');
+define('BASE_URL_WEB', 'http://localhost/EasyCMS/EasyCMS/');
 define('APP_PATH', realpath(__DIR__ . '/'));
 
 

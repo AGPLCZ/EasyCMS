@@ -6,23 +6,39 @@ require "config.php";
 <?php
 $cesta = BASE_URL;
 
-$query2 = "SELECT id, rubrikyId FROM galerie WHERE id";
-$result2 = $conn->query($query2);
+if (isset($_GET["galerieUpdateId"])) {
+	$galerieUpdateId = $_GET['galerieUpdateId'];
 
-if (!$result2) {
-	return false;
+
+
+
+
+
+	$query2 = "SELECT rubrikyId,title,perex,href,howOpen,img FROM galerie WHERE id = $galerieUpdateId";
+	$stmt2 = $conn->stmt_init();
+	$stmt2->prepare($query2);
+	$stmt2->execute();
+	$stmt2->bind_result($rubrikyIdx, $title, $perex, $href, $howOpen, $img);
+
+	while ($stmt2->fetch()) {
+		$rubrikyIdx;
+		$title;
+		$perex;
+		$href;
+		$howOpen;
+		$img;
+	}
 }
 
-while ($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
-	$id = $row2['id'];
-	$rubrikyId = $row2['rubrikyId'];
-}
+
+
 
 
 
 if (isset($_POST["galerieSubmit"])) {
-	$rubrikyId = $_POST["rubrikyId"];
+	$id = $_POST["id"];
 	$title = $_POST["title"];
+	$rubrikyId = $_POST["rubrikyId"];
 	$perex = $_POST["perex"];
 	$href = $_POST["href"];
 	$howOpen = $_POST["howOpen"];
@@ -30,13 +46,14 @@ if (isset($_POST["galerieSubmit"])) {
 
 
 	// Vlož do databáze proměnné z formuláře
-	$query = "INSERT INTO galerie(rubrikyId,title,perex,href,howOpen,img) VALUES(?,?,?,?,?,?)";
+	$query = "UPDATE galerie SET rubrikyId=?,title=?,perex=?,href=?,howOpen=?,img=? WHERE id=?";
+
 	$stmt = $conn->stmt_init();
 	$stmt->prepare($query);
-	$stmt->bind_param('isssss', $rubrikyId, $title, $perex, $href, $howOpen, $img);
+	$stmt->bind_param('issssss', $rubrikyId, $title, $perex, $href, $howOpen, $img, $id);
 
 	if ($stmt->execute()) {
-		header("Location: " . BASE_URL . GALERIE_VYPIS . ".php?odeslano=vytvorena");
+		header("Location: " . BASE_URL . GALERIE_VYPIS . ".php?odeslano=vytvorena" . "&galerieUpdateId=" . $id);
 		$stmt->close();
 		$conn->close();
 		exit;
@@ -76,7 +93,7 @@ require "header.php";
 
 			<div class="row g-3 mb-4 align-items-center mt-4 justify-content-between">
 				<div class="col-auto">
-					<h1 class="app-page-title mb-0">Nový záznam galerie</h1>
+					<h1 class="app-page-title mb-0">Upravit záznam</h1>
 
 
 
@@ -116,7 +133,7 @@ require "header.php";
 									<div class="app-card app-card-settings shadow-sm p-4">
 
 										<div class="app-card-body">
-											<form action="galerieNew.php" method="post" class="form-signup">
+											<form action="galerieUpdate.php" method="post" class="form-signup">
 
 
 
@@ -134,7 +151,7 @@ require "header.php";
 													
 															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
 															
-															Účet byl vytvořen</p>';
+															Galerie byla upravena</p>';
 													}
 												}
 
@@ -162,18 +179,20 @@ require "header.php";
 
 
 												?>
-												<div class="mb-3">
-													<label for="setting-input-1" class="form-label">Nadpis</label>
-													<input type="text" name="title" class="form-control" placeholder="Název galerie">
-												</div>
-
 
 												<div class="mb-3">
-													<label for="setting-input-1" class="form-label">Štítek</label>
+
+													<label for="setting-input-1" class="form-label">Rubrika</label>
+
+
 													<select type="select" name="rubrikyId" class="form-control">
 
-
+														<option value="<?php echo $rubrikyIdx; ?>"><?php echo $rubrikyIdx; ?></option>
 														<?php
+
+														/*
+ JOIN galerie ON rubriky.id = rubrikyId WHERE rubrikyId = galerieUpdateId
+														*/
 														$query2 = "SELECT id, title FROM rubriky ORDER BY id DESC";
 														$stmt2 = $conn->stmt_init();
 														$stmt2->prepare($query2);
@@ -182,25 +201,65 @@ require "header.php";
 
 														while ($stmt2->fetch()) {
 														?>
-															<option value="<?php echo $id ?>"><?php echo $title ?></option>
+
+
+															<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
 
 														<?php 	}  ?>
+
+
 													</select>
 												</div>
 
 
+
+
+
+
+												<div class="mb-3">
+
+													<?php
+
+
+													$query2 = "SELECT rubrikyId,title,perex,href,howOpen,img FROM galerie WHERE id = $galerieUpdateId";
+													$stmt2 = $conn->stmt_init();
+													$stmt2->prepare($query2);
+													$stmt2->execute();
+													$stmt2->bind_result($rubrikyIdx, $title, $perex, $href, $howOpen, $img);
+
+													while ($stmt2->fetch()) {
+														$rubrikyIdx;
+														$title;
+														$perex;
+														$href;
+														$howOpen;
+														$img;
+													}
+
+
+
+													?>
+
+													<input type="hidden" name="id" class="form-control" placeholder="<?php echo $galerieUpdateId; ?>" value="<?php echo $galerieUpdateId;  ?>">
+													<label for="setting-input-1" class="form-label">Nadpis</label>
+													<input type="text" name="title" class="form-control" placeholder="<?php echo $title ?>" value="<?php echo $title ?>">
+												</div>
+
+
+
+
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Perex</label>
-													<input type="text" name="perex" class="form-control" placeholder="Perex">
+													<input type="text" name="perex" class="form-control" placeholder="<?php echo $perex ?>" value="<?php echo $perex ?>">
 
 												</div>
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Odkaz na obrázek</label>
-													<input type="text" name="img" class="form-control" placeholder="img/article/1.png" value="img/article/1.png">
+													<input type="text" name="img" class="form-control" placeholder="<?php echo $img ?>" value="<?php echo $img ?>">
 												</div>
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Cesta odkazu</label>
-													<input type="text" name="href" class="form-control" placeholder="Cesta odkazu" value="https://dobrodruzi.club/sekce-pro-dobrodruhy/">
+													<input type="text" name="href" class="form-control" placeholder="<?php echo $href ?>" value="<?php echo $href ?>">
 												</div>
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Cesta odkazu</label>
@@ -216,10 +275,12 @@ require "header.php";
 
 												</div>
 
+
+
 										</div>
 										<div class="mb-3">
 
-											<button type="submit" name="galerieSubmit" class="btn app-btn-primary">Vytvořit novou galerii</button>
+											<button type="submit" name="galerieSubmit" class="btn app-btn-primary">Upravit galerii</button>
 										</div>
 
 
