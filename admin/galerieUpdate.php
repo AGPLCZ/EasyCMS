@@ -187,7 +187,7 @@ require "header.php";
 
 													<select type="select" name="rubrikyId" class="form-control">
 
-														<option value="<?php echo $rubrikyIdx; ?>"><?php echo $rubrikyIdx; ?></option>
+														<option value="<?php echo $rubrikyIdx; ?>"><?php echo "id" . $rubrikyIdx . " - " . $title ?></option>
 														<?php
 
 														/*
@@ -203,7 +203,7 @@ require "header.php";
 														?>
 
 
-															<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+															<option value="<?php echo $id; ?>"><?php echo "id" . $id . " - " . $title; ?></option>
 
 														<?php 	}  ?>
 

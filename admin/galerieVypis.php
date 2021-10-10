@@ -5,6 +5,9 @@ require_once "config.php";
 $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 
+
+
+
 <div class="app-wrapper">
 
 	<div class="app-content pt-3 p-md-3 p-lg-4">
@@ -95,7 +98,7 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 												<tr>
 													<th class="cell"></th>
 													<th class="cell">ID</th>
-													<th class="cell">Štítek ID</th>
+													<th class="cell">Rubrika ID</th>
 													<th class="cell">Název</th>
 													<th class="cell">Akce</th>
 
@@ -134,15 +137,44 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 
 												<tr>
 													<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="galerieSubmitDel">Smazat galerii</button></td>
+
+
+												</tr>
 												<tr>
+													<td class="cell" colspan="8">
+
+														<?php
+														$queryc = "SELECT COUNT(id) AS kolik FROM galerie";
+														$resultc = $conn->query($queryc);
+
+														if (!$resultc) {
+															return false;
+														}
+
+														while ($row = $resultc->fetch_array(MYSQLI_ASSOC)) {
+															$kolik = $row['kolik'];
+
+															echo "Kolik je záznamů: " . $kolik . "\n";
+														}
 
 
 
-													<?php
-													$stmt->close();
-													$conn->close();
 
-													?>
+														?>
+
+
+
+													</td>
+												</tr>
+
+
+
+
+												<?php
+												$stmt->close();
+												$conn->close();
+
+												?>
 
 											</tbody>
 
