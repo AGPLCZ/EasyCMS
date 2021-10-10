@@ -94,7 +94,7 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 												<tr>
 													<th class="cell"></th>
 													<th class="cell">ID</th>
-													<th class="cell">Jméno šítku</th>
+													<th class="cell">Jméno rubriky</th>
 													<th class="cell">Akce</th>
 
 												</tr>

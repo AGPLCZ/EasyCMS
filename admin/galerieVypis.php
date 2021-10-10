@@ -114,16 +114,16 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 
 
 
-												$query = "SELECT id, rubrikyId, title FROM galerie ORDER BY id DESC";
+												$query = "SELECT galerie.id, galerie.rubrikyId, galerie.title, rubriky.title AS tit FROM galerie JOIN rubriky ON rubriky.id = galerie.rubrikyId ORDER BY id DESC";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
-												$stmt->bind_result($id, $rubrikyId, $title);
+												$stmt->bind_result($id, $rubrikyId, $title, $tit);
 												while ($stmt->fetch()) { ?>
 													<tr>
 														<td class="cell"><input type="checkbox" name="galerieDel[]" value="<?php echo $id ?>"></td>
 														<td class=" cell"><span class="cell-data"><?php echo $id ?></span><span class="note">id</span></td>
-														<td class=" cell"><span class="cell-data"><?php echo $rubrikyId ?></span><span class="note">rubrikyId</span></td>
+														<td class=" cell"><span class="cell-data"><?php echo $tit; ?></span><span class="note">rubrikyId <?php echo $rubrikyId; ?></span></td>
 														<td class="cell"><?php echo $title ?></td>
 
 														<td class="cell"><a class="btn btn-outline-secondary" href="galerieUpdate.php?galerieUpdateId=<?php echo $id ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
