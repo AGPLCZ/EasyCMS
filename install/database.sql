@@ -1,4 +1,4 @@
-CREATE DATABASE `konstrakt` CHARACTER SET utf8;
+CREATE DATABASE `konstraktX` CHARACTER SET utf8;
 
     
 --
@@ -17,21 +17,25 @@ CREATE TABLE `users` (
 
 
 
+
+CREATE TABLE `rubriky` (
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) CHARACTER SET latin2 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
 CREATE TABLE `galerie` (
-  `galerieId` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `rubrikyId` int(11) NOT NULL,
-  `galerieTitle` varchar(128) NOT NULL,
-  `galeriePerex` varchar(255) NOT NULL,
-  `galerieHref` varchar(128) NOT NULL,
-    `galerieOut` varchar(128) NOT NULL,
-  `galerieImg` varchar(128) NOT NULL,
-  FOREIGN KEY (rubrikyId) REFERENCES rubriky(rubrikyId)
+  `title` varchar(128) NOT NULL,
+  `perex` varchar(255) NOT NULL,
+  `href` varchar(128) NOT NULL,
+  `howOpen` varchar(128) NOT NULL,
+  `img` varchar(128) NOT NULL,
+  FOREIGN KEY (rubrikyId) REFERENCES rubriky(id)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
 
-CREATE TABLE `rubriky` (
-  `rubrikyId` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `rubrikyName` varchar(128) CHARACTER SET latin2 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
