@@ -221,11 +221,16 @@ require "header.php";
 													<?php
 
 
-													$query2 = "SELECT rubrikyId,title,perex,href,howOpen,img FROM galerie WHERE id = $galerieUpdateId";
+													$query2 = "SELECT rubrikyId,title,perex,href,howOpen,img FROM galerie WHERE id = ?";
 													$stmt2 = $conn->stmt_init();
 													$stmt2->prepare($query2);
+													$stmt2->bind_param('i', $galerieUpdateId);
 													$stmt2->execute();
 													$stmt2->bind_result($rubrikyIdx, $title, $perex, $href, $howOpen, $img);
+
+
+
+
 
 													while ($stmt2->fetch()) {
 														$rubrikyIdx;
