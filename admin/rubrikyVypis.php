@@ -83,7 +83,7 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 															$query = ("DELETE FROM rubriky WHERE id=?");
 															$stmt = $conn->stmt_init();
 															$stmt->prepare($query);
-															$stmt->bind_param('s', $rubrikyDel);
+															$stmt->bind_param('i', $rubrikyDel);
 															$stmt->execute();
 														}
 													}

@@ -159,30 +159,28 @@ require "header.php";
 
 
 
-													$queryRubrikyUpdate = "SELECT id, title FROM rubriky WHERE id = $rubrikyUpdateId";
-													$resultRubrikyUpdate = $conn->query($queryRubrikyUpdate);
+													$query = "SELECT id, title FROM rubriky WHERE id = ?";
+													$stmt = $conn->prepare($query);
+													$stmt->bind_param('s', $rubrikyUpdateId);
+													$stmt->execute();
+													$stmt->bind_result($id, $title);
 
-													if (!$resultRubrikyUpdate) {
+													if (!$stmt) {
 														return false;
 													}
-
-													while ($row = $resultRubrikyUpdate->fetch_assoc()) {
-														$idSelect = $row['id'];
-														$nameSelect = $row['title'];
-
-
+													while ($stmt->fetch()) {
 
 													?>
 
-														<input type="hidden" name="id" placeholder="<?php echo $idSelect ?>" value="<?php echo $idSelect ?>">
-														<input type="text" name="title" class="form-control" placeholder="<?php echo $nameSelect ?>" value="<?php echo $nameSelect ?>">
+														<input type="hidden" name="id" placeholder="<?php echo $id ?>" value="<?php echo $id ?>">
+														<input type="text" name="title" class="form-control" placeholder="<?php echo $nameSelect ?>" value="<?php echo $title ?>">
 
 													<?php 	} ?>
+												</div>
+												<div class="mb-3">
 
-													<div class="mb-3">
-
-														<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Upravit rubriku</button>
-													</div>
+													<button type="submit" name="rubrikySubmit" class="btn app-btn-primary">Upravit rubriku</button>
+												</div>
 
 
 

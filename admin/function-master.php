@@ -25,27 +25,44 @@ function filtrInt($id)
 
 
 
-function vypis($sloupce, $tabulka, $podminka)
+function userVypis($sort)
 {
-    $query = "SELECT $sloupce FROM $tabulka WHERE $podminka";
-    return $query;
+
+    if ($sort == 'DESC') {
+        $query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId DESC";
+    } else {
+        $query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId ASC";
+    }
+
+    return trim($query);
 }
 
 
 
 
-function update($sloupce, $tabulka, $podminka)
+
+
+
+
+
+
+
+
+function create_posts_query($where = '')
 {
-    $query = "UPDATE $tabulka SET $sloupce WHERE $podminka";
-    return $query;
-}
+    $query = "SELECT p.*, u.email, GROUP_CONCAT(t.tag SEPARATOR '~||~') AS tags
+		    FROM posts p
+		    LEFT JOIN posts_tags pt ON (p.id = pt.post_id)
+		    LEFT JOIN tags t ON (t.id = pt.tag_id)
+		    LEFT JOIN users u ON (p.user_id = u.id)
+		";
 
+    if ($where) {
+        $query .= $where;
+    }
 
+    $query .= " GROUP BY p.id";
+    $query .= " ORDER BY p.created_at DESC";
 
-
-function vypisJOIN($sloupce, $tabulka, $podminka)
-{
-    $query = "UPDATE $tabulka SET $sloupce WHERE $podminka";
-    $query = "SELECT galerie.id, galerie.rubrikyId, galerie.title, rubriky.title AS tit FROM $tabulka JOIN rubriky ON rubriky.id = galerie.rubrikyId ORDER BY id DESC";
-    return $query;
+    return trim($query);
 }

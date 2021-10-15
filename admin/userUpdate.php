@@ -16,25 +16,6 @@ if (isset($_POST["userSubmit"])) {
 
 
 
-$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE userId LIKE $userUpdateId";
-$result = $conn->query($query);
-
-if (!$result) {
-	return false;
-}
-
-while ($row = $result->fetch_assoc()) {
-	$userId = $row['userId'];
-	$userLogin = $row['userLogin'];
-	$userEmail = $row['userEmail'];
-	$userEmail = $row["userEmail"];
-	$userNickName = $row["userNickName"];
-	$userFirstName = $row["userFirstName"];
-	$userLastName = $row["userLastName"];
-}
-
-
-
 if (isset($_POST["userSubmit"])) {
 
 	$userLogin = $_POST["userLogin"];
@@ -177,9 +158,10 @@ require "header.php";
 
 									<tbody>
 										<?php
-										$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE userId LIKE $userUpdateId";
+										$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users WHERE userId LIKE ? limit 1";
 										$stmt = $conn->stmt_init();
 										$stmt->prepare($query);
+										$stmt->bind_param('s', $userUpdateId);
 										$stmt->execute();
 										$stmt->bind_result($userId, $userLogin, $userEmail, $userNickName, $userFirstName, $userLastName);
 
