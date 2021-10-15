@@ -80,7 +80,29 @@ require "config.php";
 					<div class="app-card app-card-stat shadow-sm h-100">
 						<div class="app-card-body p-3 p-lg-4">
 							<h4 class="stats-type mb-1">Počet článků</h4>
-							<div class="stats-figure">23</div>
+							<div class="stats-figure">
+
+								<?php
+
+
+
+
+								$query = "SELECT id FROM galerie ORDER BY id";
+								$stmt = $conn->stmt_init();
+								$stmt->prepare($query);
+								$stmt->execute();
+								$stmt->store_result();
+								$stmt->bind_result($id);
+								echo '<div class="stats-figure">' . $stmt->num_rows . '</div>';
+
+								/*
+							while ($stmt->fetch()) {
+								echo $userId . "<br>";
+							}
+*/
+								?>
+
+							</div>
 							<div class="stats-meta">kategorie ALL</div>
 						</div>
 						<!--//app-card-body-->
@@ -107,11 +129,11 @@ require "config.php";
 							$stmt->bind_result($userId);
 							echo '<div class="stats-figure">' . $stmt->num_rows . '</div>';
 
-
-
-
-
-
+							/*
+							while ($stmt->fetch()) {
+								echo $userId . "<br>";
+							}
+*/
 							?>
 							<div class="stats-meta">Master</div>
 						</div>

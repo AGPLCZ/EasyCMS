@@ -170,7 +170,7 @@ require "header.php";
 
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Štítek</label>
-													<select type="select" name="rubrikyId" class="form-control">
+													<select type="select" name="rubrikyId" class="form-select w-auto">
 
 
 														<?php

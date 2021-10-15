@@ -198,7 +198,7 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 												}
 											?>
 											<tr>
-												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
+												<td class="cell" colspan="9"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
 											<tr>
 											<?php
 											}
@@ -292,7 +292,7 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 											?>
 
 											<tr>
-												<td class="cell" colspan="8"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
+												<td class="cell" colspan="9"><button type="submit" class="btn app-btn-primary theme-btn mx-auto" name="userSubmitDel">Smazat uživatele</button></td>
 											<tr>
 											<?php
 											}

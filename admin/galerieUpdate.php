@@ -186,7 +186,7 @@ require "header.php";
 													<label for="setting-input-1" class="form-label">Rubrika</label>
 
 
-													<select type="select" name="rubrikyId" class="form-control">
+													<select type="select" name="rubrikyId" class="form-select w-auto">
 
 														<option value="<?php echo $rubrikyIdx; ?>"><?php echo "id" . $rubrikyIdx . " - " . $title ?></option>
 														<?php
