@@ -21,6 +21,44 @@
 
     <aside>
 
+
+
+
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-4 mb-0">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <i class="fal fa-user" style="padding-right: 7px;"></i>
+
+                    <span class="fs-4">Průvodce dětí</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Úvodní stránka</a></li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">O mne</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galerie.php">Fotogalerie</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+
+
+
+
+        <!--
+
+
         <nav class="navbar navbar-expand-lg  navbar-light" aria-label="Ninth navbar example" style="background-color: rgb(255, 255, 255);">
 
             <div class="container-xl" style="margin-top: 10px; margin-bottom: 10px;">
@@ -64,7 +102,11 @@
                     </ul>
                 </div>
             </div>
+
+-->
+
         </nav>
+
 
 
     </aside>

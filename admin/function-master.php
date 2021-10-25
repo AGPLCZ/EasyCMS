@@ -8,11 +8,27 @@ function namePage()
 
 define('BASE_URL', 'http://localhost/EasyCMS/EasyCMS/admin/');
 define('BASE_URL_WEB', 'http://localhost/EasyCMS/EasyCMS/');
-define('APP_PATH', realpath(__DIR__ . '/'));
+define('APP_PATH', realpath(__DIR__ . '/../'));
+define('APP_PATH_NEW', pathinfo(__DIR__, PATHINFO_DIRNAME));
+
+
+
+
+
+function asset($path, $base = BASE_URL . 'assets/')
+{
+    $path = trim($path, '/');
+    return filter_var($base . $path, FILTER_SANITIZE_URL);
+}
+
+
+
+
 
 
 define('GALERIE_VYPIS', 'galerieVypis');
 define('RUBRIKY_VYPIS', 'rubrikyVypis');
+
 
 
 function filtrInt($id)
@@ -23,46 +39,92 @@ function filtrInt($id)
     }
 }
 
+/*
 
-
-function userVypis($sort)
+function my_real_escape_string($db, $data)
 {
-
-    if ($sort == 'DESC') {
-        $query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId DESC";
-    } else {
-        $query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId ASC";
-    }
-
-    return trim($query);
+    $data = trim($data); // ořizne string
+    $data = strip_tags($data); // smaže tagy a jine pokusy
+    $data = htmlspecialchars($data); // prevede HTML na specialni znaky
+    $data = mysqli_real_escape_string($db, $data); // Escapes special characters in a string for use in an SQL statement
+    return $data;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-function create_posts_query($where = '')
+function kontrolaInputu($userLogin, $userPass, $userPassRe, $userEmail, $jmenoSouboru)
 {
-    $query = "SELECT p.*, u.email, GROUP_CONCAT(t.tag SEPARATOR '~||~') AS tags
-		    FROM posts p
-		    LEFT JOIN posts_tags pt ON (p.id = pt.post_id)
-		    LEFT JOIN tags t ON (t.id = pt.tag_id)
-		    LEFT JOIN users u ON (p.user_id = u.id)
-		";
 
-    if ($where) {
-        $query .= $where;
+    // KONTROLA ZADÁVÁNÍ    
+
+    // není-li prázdné pole
+    if (empty($userLogin) || empty($userPass) || empty($userEmail)) {
+        header("Location: " . $jmenoSouboru . ".php?error=prazdne&userLogin=" . $userLogin . '&userEmail=' . $userEmail);
+        exit();
     }
 
-    $query .= " GROUP BY p.id";
-    $query .= " ORDER BY p.created_at DESC";
+    // pouze písmena a čísla
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $userLogin)) {
+        header("Location: " . $jmenoSouboru . ".php?error=invalidLogin&userEmail=" . $userEmail);
+        exit();
+    }
+    //  kontrola emailu
+    if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
+        header("Location: " . $jmenoSouboru . ".php?error=invalidEmail&userLogin=" . $userLogin . '&userEmail=' . $userEmail);
+        exit();
+    }
 
-    return trim($query);
+    // shoda hesla
+    if ($userPass !== $userPassRe) {
+        header("Location: " . $jmenoSouboru . ".php?error=neshodneHeslo&userLogin=" . $userLogin . '&userEmail=' . $userEmail);
+        exit();
+    }
 }
+
+kontrolaInputu($userLogin, $userPass, $userPassRe, $userEmail, 'userZapis');
+
+
+
+
+
+function getHlaska()
+{
+    if (isset($_GET["error"])) {
+
+        // Hláška z GET- existující účet
+        if ($_GET["error"] == "existujiciUcet") {
+            echo '<p class="signuperror">Uživatelské jméno již existuje</p>';
+        }
+
+
+        // Hláška z GET- neshodující se heslo
+        if ($_GET["error"] == "neshodneHeslo") {
+            echo '<p class="signuperror">Heslo se neshoduje</p>';
+        }
+
+        // Hláška z GET- špatný email
+        if ($_GET["error"] == "invalidEmail") {
+            echo '<p class="signuperror">Neplatná forma emailu</p>';
+        }
+
+
+        // Hláška z GET- neplatné uživatelské jméno
+        if ($_GET["error"] == "invalidLogin") {
+            echo '<p class="signuperror">Uživatelské jméno obsahovalo zakázané znaky</p>';
+        }
+
+
+        // Hláška z GET- Nevyplněné pole 
+        if ($_GET["error"] == "prazdne") {
+            echo '<p class="signuperror">Nevyplněné pole</p>';
+        }
+    }
+
+    // GET ODESLÁNO
+    if (isset($_GET["odeslano"])) {
+
+        // Hláška z GET - účet vytvořen
+        if ($_GET["odeslano"] == "zapsano") {
+            echo '<p class="signupsuccess">Účet byl vytvořen</p>';
+        }
+    }
+}
+*/

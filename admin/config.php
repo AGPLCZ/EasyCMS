@@ -14,3 +14,4 @@ if ($conn->connect_errno) {
 
 
 require_once "function-master.php";
+require_once "function-post.php";

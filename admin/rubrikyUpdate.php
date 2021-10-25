@@ -168,14 +168,14 @@ require "header.php";
 													if (!$stmt) {
 														return false;
 													}
-													while ($stmt->fetch()) {
+													while ($stmt->fetch()) :
 
 													?>
 
 														<input type="hidden" name="id" placeholder="<?php echo $id ?>" value="<?php echo $id ?>">
 														<input type="text" name="title" class="form-control" placeholder="<?php echo $nameSelect ?>" value="<?php echo $title ?>">
 
-													<?php 	} ?>
+													<?php endwhile ?>
 												</div>
 												<div class="mb-3">
 

@@ -257,9 +257,9 @@ $pageName = basename($_SERVER['PHP_SELF'], '.php');
 
 
 												if ($seradit == "od_nejmensiho") {
-													$query = userVypis('ASC');
+													$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId ASC";
 												} else {
-													$query = userVypis('DESC');
+													$query = "SELECT userId, userLogin,userEmail,userNickName,userFirstName,userLastName FROM users ORDER BY userId DESC";
 												}
 
 												$stmt = $conn->stmt_init();

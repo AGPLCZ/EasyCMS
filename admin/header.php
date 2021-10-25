@@ -24,7 +24,7 @@ if (!isset($_SESSION['userId'])) {
   <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
 
   <!-- App CSS -->
-  <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+  <link id="theme-style" rel="stylesheet" href="<?php echo asset('/css/portal.css'); ?>">
 
 
 
