@@ -155,7 +155,6 @@ if (!$result) {
 
 
 
-
 <?php
 require_once  "footer.php";
 ?>

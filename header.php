@@ -13,7 +13,8 @@
     <link href="icon2/css/all.css" rel="stylesheet">
     <link href="mystyle.css" rel="stylesheet">
 
-    <title>Průvodce dětí</title>
+    <title>Průvodce dětí - Jednodenní výlety i vícedenní expedice, kroužky a kurzy pro kluky a holky od 6 do 18 let.
+    </title>
 
 </head>
 
@@ -26,26 +27,27 @@
 
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-4 mb-0">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                     <i class="fal fa-user" style="padding-right: 7px;"></i>
 
-                    <span class="fs-4">Průvodce dětí</span>
+                    <span class="fs-4">Lektor - Petr Lízal</span>
                 </a>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Úvodní stránka</a></li>
-
-                    <li class="nav-item"><a href="#" class="nav-link">O mne</a></li>
-                    <li class="nav-item"><a class="nav-link" href="galerie.php">Fotogalerie</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php?page=index">Úvodní stránka</a></li>
+                    <li class="nav-item"><a href="index.php?page=o-mne" class="nav-link">O mne</a></li>
+                    <li class="nav-item"><a href="index.php?page=krouzky" class="nav-link">Kroužky</a></li>
+                    <li class="nav-item"><a href="index.php?page=vylety" class="nav-link">Výlety</a></li>
+                    <li class="nav-item"><a href="index.php?page=cenik" class="nav-link">Ceník</a></li>
+                    <!--  <li class="nav-item"><a href="galerie.php" class="nav-link">Blog</a></li>-->
+                    <li class="nav-item"><a href="index.php?page=kontakt.php" class="nav-link">Kontakt</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nic</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
                             <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="galerie.php">Blog</a></li>
+                            <li><a class="dropdown-item" href="index.php?page=all">Šablona</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -125,33 +127,53 @@
             <div class="carousel-inner">
 
 
-                <div class="carousel-item active" style="background-image: url(img/t4.jpg);">
+
+                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/t4x.jpg');">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption text-caption"> <?php /* text-start, text-caption  text-end */  ?>
 
 
-                            <h1 class="" style="text-transform: uppercase">Jsem průvodce pro mladé dobrodruhy</h1>
+                            <h1 class="" style="text-transform: uppercase">Jsem profesionální průvodce</h1>
                             <p class="text-caption" style="text-transform: uppercase">Putujeme přírodou a učíme se novým dovednostem</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
                         </div>
                     </div>
                 </div>
 
 
+
                 <!--//slide dvojka-->
-                <div class="carousel-item" style="background-image: url(img/t5.jpg);">
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/t10.jpg'); ">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 class="" style="text-transform: uppercase">Nabízím zážitky na celý život</h1>
                             <p style="text-transform: uppercase">výlety I expedice I vzdělávací kurzy</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
+                        </div>
+                    </div>
+                </div>
+                <!--//slide dvojka end-->
+
+
+
+
+                <!--//slide dvojka-->
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/t10.jpg'); ">
+                    <div class="zigzag"></div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 class="" style="text-transform: uppercase">VYTVÁŘÍM PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
+                            <p style="text-transform: uppercase">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</p>
+                            <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>
                     </div>
                 </div>
                 <!--//slide dvojka end-->
             </div>
+
+
 
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

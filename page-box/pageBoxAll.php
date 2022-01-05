@@ -668,21 +668,6 @@
 
 
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 fw-normal">Punny headline</h1>
-            <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-            <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-        </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-    </div>
-
-
-
-
-
-
 
 
 
@@ -746,10 +731,287 @@
 
 
 
+
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 "></h2>
+
+        <a class="btn btn-secondary" href="?rubriky=0,1,2,5">Všechny kategorie</a>
+        <a class="btn btn-primary" href="?rubriky=1">Výlety</a> <a class="btn btn-primary" href="?rubriky=2">Klubovna</a> <a class="btn btn-primary" href="?rubriky=5">Kurzy</a>
+
+
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+
+
+            <div class="feature col">
+                <p><img src="img/article/1.png" alt="" class="img-fluid" /></p>
+                <h3 class="fs-5">Výlety</h3>
+                <p class="fw-light lh-base">nic</p>
+
+                <a class="btn btn-outline-secondary" href="https://dobrodruzi.club/sekce-pro-dobrodruhy/" target=" _blank" role="button">Zobrazit</a>
+            </div>
+
+
+            <div class="feature col">
+                <p><img src="img/article/1.png" alt="" class="img-fluid" /></p>
+                <h3 class="fs-5">Výlety to je</h3>
+                <p class="fw-light lh-base">perex neco</p>
+
+                <a class="btn btn-outline-secondary" href="https://dobrodruzi.club/sekce-pro-dobrodruhy/" target=" _blank" role="button">Zobrazit</a>
+            </div>
+
+
+
+            <div class="feature col">
+                <p><img src="img/article/1.png" alt="" class="img-fluid" /></p>
+                <h3 class="fs-5">Nadpis555</h3>
+                <p class="fw-light lh-base">perex</p>
+
+                <a class="btn btn-outline-secondary" href="https://dobrodruzi.club/sekce-pro-dobrodruhy/" target=" _blank" role="button">Zobrazit</a>
+            </div>
+
+
+
+
+            <div class="feature col">
+                <p><img src="img/article/1.png" alt="" class="img-fluid" /></p>
+                <h3 class="fs-5">MLADÍ DOBRODRUZI</h3>
+                <p class="fw-light lh-base"></p>
+
+                <a class="btn btn-outline-secondary" href="https://dobrodruzi.club/sekce-pro-dobrodruhy/" target=" _blank" role="button">Zobrazit</a>
+            </div>
+
+
+
+            <div class="feature col">
+                <p><img src="img/article/1.png" alt="" class="img-fluid" /></p>
+                <h3 class="fs-5">Název</h3>
+                <p class="fw-light lh-base">lklk</p>
+
+                <a class="btn btn-outline-secondary" href="https://dobrodruzi.club/sekce-pro-dobrodruhy/" target=" _blank" role="button">Zobrazit</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </main>
 
 
 
-<?php
-require_once  "footer.php";
-?>
+
+
+
+<div class=" bg-light">
+    <div class=" container">
+        <div class="row featurette my-5 py-5">
+            <div class="col-md-10">
+                <h1 class="display-5  text-black">„Jsem pro děti parťák,<span class="text-muted"> ne diktátor“</span></h1>
+                <p class="lead"></p>
+
+                <p class="lead">Děti vedu k samostatnosti, přistupuji k nim individuálně a s respektem. Zajišťuji bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení. Podporuji jejich kreativitu a zručnost.
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class=" container">
+
+    <div class="row featurette my-5 py-5">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Dávám možnost říct<span class="text-muted"> „ne“</span></h2>
+            <p class="lead"></p>
+
+            <p class="lead">
+
+                Ve skupině vytváříme skutečné dohody, hledáme podstatu názorů a potřeb, následně společně tvoříme přijatelná řešení. Akceptuji volbu a přirozené následky.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="img/page/obr1.jpg" class="d-block mx-lg-auto img-fluid" alt="popis" width="500" height="500" loading="lazy">
+        </div>
+    </div>
+
+
+
+    <div class="row featurette my-5 py-5">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Připravuji řízený program formou nabídky</h2>
+            <p class="lead"></p>
+
+            <p class="lead">Využívám vnitřní motivace dětí, aby se mohly věnovat věcem proto, že v nich vidí smysl, že je baví a že samy chtějí. </p>
+        </div>
+        <div class="col-md-5">
+            <img src="img/page/obr2.jpg" class="d-block mx-lg-auto img-fluid" alt="popis" width="500" height="500" loading="lazy">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div class=" bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h3 class="display-7 fw-bold">„Průvodci jsou pro děti partneři, ne diktátoři“</h3>
+        <p class=" fw-normal">Děti vedu k samostatnosti, přistupuji k nim individuálně a s respektem. Zajišťuji bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Podporuji jejich kreativitu a zručnost a dávám jim prostor pro volnou hru. Akceptuji volbu a přirozené následky. Využívám vnitřní motivace dětí, aby se mohly věnovat věcem proto, že v nich vidí smysl, že je baví a že samy chtějí. Proto pro ně připravuji řízený program formou nabídky. Dávám možnost říct „ne“. Ve skupině vytváříme skutečné dohody, hledáme podstatu názorů a potřeb, následně společně tvoříme přijatelná řešení.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class=" bg-light">
+    <div class=" container">
+        <div class="row featurette my-5 py-5">
+            <div class="col-md-7 order-md-2">
+                <h1 class="display-5  text-black">„Jsem pro děti parťák,<span class="text-muted"> ne diktátor“</span></h1>
+                <p class="lead"></p>
+
+                <p class="lead">Děti vedu k samostatnosti, přistupuji k nim individuálně a s respektem. Zajišťuji bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení. Podporuji jejich kreativitu a zručnost.
+
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="img/page/ja1.jpg" class="d-block mx-lg-auto img-fluid" alt="popis" width="300" height="300" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container col-xxl-8 px-4 py-5">
+
+
+    <div class="row g-5">
+        <div class="col-md-6">
+            <h3 class="display-7">Připravuji řízený program formou nabídky</h3>
+            <p>Využívám vnitřní motivace dětí, aby se mohly věnovat věcem proto, že v nich vidí smysl, že je baví a že samy chtějí.</p>
+
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="display-7  text-black">„Jsem pro děti parťák,<span class="text-muted"> ne diktátor“</span></h3>
+            <p>Děti vedu k samostatnosti, přistupuji k nim individuálně a s respektem. Zajišťuji bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení. Podporuji jejich kreativitu a zručnost.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="bg-light  mb-5 mt-5">
+
+    <div class="container marketing col-xxl-8 px-4 py-5">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <p><i class="fas fa-hiking  text-primary" style="font-size: 45px"></i></p>
+
+                <h4 class="fw-bold">KDY
+                </h4>
+                <p class="fw-light">
+                    každé pondělí<br>
+                    od února v pátek<br>
+                    od 16.00 do 18.00</p>
+
+            </div>
+            <div class="col-lg-4">
+                <p><i class="fas fa-users text-primary" style="font-size: 45px"></i></p>
+
+                <h4 class="fw-bold">KDE</h4>
+                <p class="fw-light">
+                    Brno – Nový Lískovec<br>
+                    komunitní centrum Skála<br>
+                    Oblá 505/54a</p>
+
+            </div>
+            <div class="col-lg-4">
+                <p><i class="fas fa-campground text-primary" style="font-size: 45px"></i></p>
+
+
+
+                <h4 class="fw-bold">PRO</h4>
+                <p class="fw-light">
+                    4 až 8 účastníků<br>
+                    od 7 do 12 let<br>
+                    přijímáme nováčky</p>
+
+            </div>
+        </div><!-- /.row -->
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container col-xxl-8 px-0 py-1">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="img/page/obr2.jpg" class="d-block mx-lg-auto img-fluid" alt="popis" width="500" height="500" loading="lazy">
+        </div>
+        <d class="col-lg-6">
+
+            <div class="pb-1 py-0">
+                <h3 class=" display-7 display-6  lh-1 mb-3">Provázím mladé dobrodruhy na cestách za poznáním</h3>
+                <p class="lead">
+                    Při cestování, získáváme praktické dovednosti: jak číst v jízdních řádech a hledat spoje nebo jak se orientovat podle mapy, ať už jsme ve městě či v lese. Učíme se i tábornickým dovednostem, jak se ochránit před deštěm a proti prochladnutí, jak postavit stan, jak rozdělat oheň a uvařit si jídlo.​</p>
+                <p class="lead">
+                    Cíle jednodenních i vícedenních výletů plánujeme podle zájmu dětí a tak, aby nebyly příliš finančně náročné.
+                </p>
+
+            </div>
+
+
+    </div>
+</div>

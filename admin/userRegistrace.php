@@ -12,6 +12,7 @@ if (isset($_POST["userSubmit"])) {
 
 
 
+
 	// KONTROLA ZADÁVÁNÍ    
 	$jmenoSouboru = 'userRegistrace';
 
@@ -63,7 +64,7 @@ if (isset($_POST["userSubmit"])) {
 	$stmt->bind_param('ssssss', $userLogin, $userPassHash, $userEmail, $userNickName, $userFirstName, $userLastName);
 
 	if ($stmt->execute()) {
-		header("Location: " . BASE_URL . namePage() . ".php?odeslano=zapsano");
+		header("Location: " . BASE_URL . name_page() . ".php?odeslano=zapsano");
 		$stmt->close();
 		$conn->close();
 		exit;

@@ -52,7 +52,7 @@ if (isset($_POST["galerieSubmit"])) {
 
 	// není-li prázdné pole
 	if (empty($rubrikyId)) {
-		header("Location: " . BASE_URL . namePage()  . ".php?error=prazdne");
+		header("Location: " . BASE_URL . name_page()  . ".php?error=prazdne");
 		exit();
 	}
 }

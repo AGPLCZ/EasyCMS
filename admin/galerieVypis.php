@@ -157,8 +157,8 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 															echo "Kolik je záznamů: " . $kolik . "\n";
 														}
 
-
-
+														$data = "<html>";
+														echo $hmm = plain($data);
 
 														?>
 
