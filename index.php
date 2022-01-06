@@ -36,7 +36,7 @@ if (isset($_GET["page"])) {
     }
 
     if ($_GET["page"] == "kontakt") {
-        require_once  "page-box/box-k1.php";
+        require_once  "page-box/box-kontakt.php";
     }
 
 

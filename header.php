@@ -40,16 +40,16 @@
                     <li class="nav-item"><a href="index.php?page=vylety" class="nav-link">Výlety</a></li>
                     <li class="nav-item"><a href="index.php?page=cenik" class="nav-link">Ceník</a></li>
                     <!--  <li class="nav-item"><a href="galerie.php" class="nav-link">Blog</a></li>-->
-                    <li class="nav-item"><a href="index.php?page=kontakt.php" class="nav-link">Kontakt</a></li>
+                    <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link">Kontakt</a></li>
 
-                    <li class="nav-item dropdown">
+                    <!--  <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nic</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="galerie.php">Blog</a></li>
                             <li><a class="dropdown-item" href="index.php?page=all">Šablona</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </header>
         </div>
@@ -118,7 +118,7 @@
 
 
         <!--//slide-->
-        <div id="myCarousel" class="carousel slide mb-0" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -160,7 +160,7 @@
 
 
                 <!--//slide dvojka-->
-                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/t10.jpg'); ">
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/page/t-lezeni.jpg'); ">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
