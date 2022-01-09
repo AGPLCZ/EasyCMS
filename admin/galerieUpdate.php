@@ -270,7 +270,7 @@ require "header.php";
 												<div class="mb-3">
 													<label for="setting-input-1" class="form-label">Cesta odkazu</label>
 													<div class="form-check">
-														<input class="form-check-input" type="radio" name="howOpen" id="exampleRadios1" value='target=" _blank"' checked>
+														<input class="form-check-input" type="radio" name="howOpen" id="exampleRadios1" value='target="_blank"' checked>
 														<label class="form-check-label" for="exampleRadios1">Otevřít v novém okně</label>
 													</div>
 

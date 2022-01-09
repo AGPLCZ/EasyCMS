@@ -13,9 +13,10 @@ function get_back_page()
 }
 
 
-
-define('BASE_URL', 'http://localhost/EasyCMS/EasyCMS/admin/');
-define('BASE_URL_WEB', 'http://localhost/EasyCMS/EasyCMS/');
+define('BASE_URL', 'http://petrlizal.com/admin/');
+define('BASE_URL_WEB', 'http://petrlizal.com/');
+//define('BASE_URL', 'http://localhost/EasyCMS/EasyCMS/admin/');
+//define('BASE_URL_WEB', 'http://localhost/EasyCMS/EasyCMS/');
 define('APP_PATH', realpath(__DIR__ . '/../'));
 define('APP_PATH_NEW', pathinfo(__DIR__, PATHINFO_DIRNAME));
 

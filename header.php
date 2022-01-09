@@ -6,15 +6,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Průvodce dětí">
+    <meta name="description" content="Mladí dobrodruzi">
     <link rel="shortcut icon" href="admin/favicon.ico">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="icon2/css/all.css" rel="stylesheet">
+    <link href="iconpro/css/all.css" rel="stylesheet">
     <link href="mystyle.css" rel="stylesheet">
 
-    <title>Průvodce dětí - Jednodenní výlety i vícedenní expedice, kroužky a kurzy pro kluky a holky od 6 do 18 let.
+    <title>Výlety a kurzy pro děti od 6 do 15 let.
     </title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
 
 </head>
 
@@ -26,21 +27,54 @@
 
 
         <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-4 mb-0">
+            <header class="d-flex flex-wrap justify-content-center py-0 pt-2">
                 <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <i class="fal fa-user" style="padding-right: 7px;"></i>
 
-                    <span class="fs-4">Lektor - Petr Lízal</span>
+
+                    <span class="fs-3" style="">DOBRO<span class=" text-black"><b>SKAUT</b><br>
+                            <p class="fs-6 text-black">Petr Lízal - průvodce dětí</p>
+                        </span>
+
+
                 </a>
 
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php?page=index">Úvodní stránka</a></li>
-                    <li class="nav-item"><a href="index.php?page=o-mne" class="nav-link">O mne</a></li>
-                    <li class="nav-item"><a href="index.php?page=krouzky" class="nav-link">Kroužky</a></li>
-                    <li class="nav-item"><a href="index.php?page=vylety" class="nav-link">Výlety</a></li>
-                    <li class="nav-item"><a href="index.php?page=cenik" class="nav-link">Ceník</a></li>
-                    <!--  <li class="nav-item"><a href="galerie.php" class="nav-link">Blog</a></li>-->
-                    <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link">Kontakt</a></li>
+                <ul class="nav nav-pills mt-3">
+
+                    <?php if (isset($_GET["page"])) {
+                        if ($_GET["page"] == "index") {
+                            $active_index = "active";
+                        }
+                        if ($_GET["page"] == "o-mne") {
+                            $active_omne = "active";
+                        }
+                        if ($_GET["page"] == "vylety") {
+                            $active_vylety = "active";
+                        }
+                        if ($_GET["page"] == "cenik") {
+                            $active_cenik = "active";
+                        }
+                        if ($_GET["page"] == "galerie") {
+                            $active_galerie = "active";
+                        }
+                        if ($_GET["page"] == "kontakt") {
+                            $active_kontakt = "active";
+                        }
+                    } ?>
+
+
+                    <?php if (!isset($_GET["page"])) {
+
+                        $active_index = "active";
+                    } ?>
+
+
+                    <li class="nav-item"><a href="index.php?page=index" class="nav-link <?php echo $active_index ?>" aria-current="page">Úvodní stránka</a></li>
+                    <li class="nav-item"><a href="index.php?page=o-mne" class="nav-link <?php echo $active_omne ?>">O mne</a></li>
+                    <!--<li class="nav-item"><a href="index.php?page=krouzky" class="nav-link">Kroužky</a></li>-->
+                    <li class="nav-item"><a href="index.php?page=vylety" class="nav-link <?php echo $active_vylety ?>">Výlety</a></li>
+                    <li class="nav-item"><a href="index.php?page=cenik" class="nav-link <?php echo $active_cenik ?>">Ceník</a></li>
+                    <li class="nav-item"><a href="galerie.php?page=galerie" class="nav-link <?php echo $active_galerie ?>">Fotogalerie</a></li>
+                    <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link <?php echo $active_kontakt ?>">Kontakt</a></li>
 
                     <!--  <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nic</a>
@@ -128,14 +162,14 @@
 
 
 
-                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/t4x.jpg');">
+                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/slide/slideohen.jpg');">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption text-caption"> <?php /* text-start, text-caption  text-end */  ?>
 
 
-                            <h1 class="" style="text-transform: uppercase">Jsem profesionální průvodce</h1>
-                            <p class="text-caption" style="text-transform: uppercase">Putujeme přírodou a učíme se novým dovednostem</p>
+                            <h1 class="display-6 fw-bold" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Putujeme přírodou a učíme se novým dovednostem</h1>
+                            <h3 class="text-caption" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Provázíme mladé dobrodruhy na cestách za poznáním</h3>
                             <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
                         </div>
                     </div>
@@ -144,12 +178,12 @@
 
 
                 <!--//slide dvojka-->
-                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/t10.jpg'); ">
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/slide/slidelod.jpg'); ">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="" style="text-transform: uppercase">Nabízím zážitky na celý život</h1>
-                            <p style="text-transform: uppercase">výlety I expedice I vzdělávací kurzy</p>
+                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Nabízíme zážitky na celý život</h1>
+                            <p style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">výlety I expedice I vzdělávací kurzy</p>
                             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>
                     </div>
@@ -160,18 +194,19 @@
 
 
                 <!--//slide dvojka-->
-                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/page/t-lezeni.jpg'); ">
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.7)),url('img/slide/slidealex.jpg'); ">
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="" style="text-transform: uppercase">VYTVÁŘÍM PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
-                            <p style="text-transform: uppercase">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</p>
+                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">VYTVÁŘÍM PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
+                            <h3 style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</h3>
                             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>
                     </div>
                 </div>
                 <!--//slide dvojka end-->
             </div>
+
 
 
 

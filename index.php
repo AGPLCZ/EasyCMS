@@ -10,29 +10,25 @@ require_once  "header.php";
 if (isset($_GET["page"])) {
 
     if ($_GET["page"] == "index") {
-        require_once  "page-box/box1.php";
-        require_once  "page-box/box2.php";
-        require_once  "page-box/box3.php";
-        require_once  "page-box/box4.php";
-        require_once  "page-box/box5.php";
+        require_once  "page-box/box-index.php";
     }
 
 
     if ($_GET["page"] == "o-mne") {
-        require_once  "page-box/box-o1.php";
+        require_once  "page-box/box-lektor-petr.php";
     }
 
     if ($_GET["page"] == "krouzky") {
-        require_once  "page-box/box-k1.php";
+        require_once  "page-box/box-krouzky.php";
     }
 
     if ($_GET["page"] == "vylety") {
-        require_once  "page-box/box-v1.php";
+        require_once  "page-box/box-vylety.php";
     }
 
 
     if ($_GET["page"] == "cenik") {
-        require_once  "page-box/box-c1.php";
+        require_once  "page-box/box-cenik.php";
     }
 
     if ($_GET["page"] == "kontakt") {
@@ -46,11 +42,7 @@ if (isset($_GET["page"])) {
     }
 } else {
 
-    require_once  "page-box/box1.php";
-    require_once  "page-box/box2.php";
-    require_once  "page-box/box3.php";
-    require_once  "page-box/box4.php";
-    require_once  "page-box/box5.php";
+    require_once  "page-box/box-index.php";
 }
 
 

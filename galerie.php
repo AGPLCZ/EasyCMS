@@ -42,7 +42,7 @@ if (isset($_GET["posledniId"])) {
 
 
 
-$limit = 8;
+$limit = 18;
 
 $query = "SELECT id, rubrikyId, title, perex, href, howOpen, img FROM galerie WHERE rubrikyId IN ($rubriky) AND id > $posledniId LIMIT $limit";
 $result = $conn->query($query);
@@ -91,7 +91,7 @@ if (!$result) {
 
 
 
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 
 
 

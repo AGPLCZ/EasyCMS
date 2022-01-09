@@ -58,7 +58,7 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 											<thead>
 												<tr>
 												<tr>
-													<td colspan="5">
+													<td colspan="6">
 
 														<div class="col-auto">
 															<a class="btn app-btn-secondary" href="galerieNew.php">
@@ -100,7 +100,9 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 													<th class="cell">ID</th>
 													<th class="cell">Rubrika ID</th>
 													<th class="cell">Název</th>
+													<th class="cell">Cesta obrázku</th>
 													<th class="cell">Akce</th>
+
 
 												</tr>
 											</thead>
@@ -114,17 +116,18 @@ $pageTitle = basename($_SERVER['PHP_SELF'], '.php');
 
 
 
-												$query = "SELECT galerie.id, galerie.rubrikyId, galerie.title, rubriky.title AS tit FROM galerie JOIN rubriky ON rubriky.id = galerie.rubrikyId ORDER BY id DESC";
+												$query = "SELECT galerie.id, galerie.rubrikyId, galerie.title, galerie.img, rubriky.title AS tit FROM galerie JOIN rubriky ON rubriky.id = galerie.rubrikyId ORDER BY id DESC";
 												$stmt = $conn->stmt_init();
 												$stmt->prepare($query);
 												$stmt->execute();
-												$stmt->bind_result($id, $rubrikyId, $title, $tit);
+												$stmt->bind_result($id, $rubrikyId, $title, $img, $tit);
 												while ($stmt->fetch()) { ?>
 													<tr>
 														<td class="cell"><input type="checkbox" name="galerieDel[]" value="<?php echo $id ?>"></td>
 														<td class=" cell"><span class="cell-data"><?php echo $id ?></span><span class="note">id</span></td>
 														<td class=" cell"><span class="cell-data"><?php echo $tit; ?></span><span class="note">rubrikyId <?php echo $rubrikyId; ?></span></td>
 														<td class="cell"><?php echo $title ?></td>
+														<td class="cell"><?php echo $img ?></td>
 
 														<td class="cell"><a class="btn btn-outline-secondary" href="galerieUpdate.php?galerieUpdateId=<?php echo $id ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
 																	<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
