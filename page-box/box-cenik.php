@@ -1,5 +1,5 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
-    <h1 class="display-5 fw-bold">Připravím akci na míru</h1>
+    <h1 class="display-5 fw-bold">Připravíme akci na míru</h1>
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Kvalitně strávený volný čas se vyplatí Vám i dětem.
 
@@ -19,7 +19,7 @@
 
 
 
-
+<!--
 
 
 <div class="container py-3">
@@ -35,8 +35,8 @@
                         <h3 class="card-title pricing-card-title"><small class="text-muted fw-light">den / </small>1200 Kč</h3>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li></li>
-                            <li> 200 Kč / 1 hod</li>
-                            <li>24 hodin / 1 200 Kč</li>
+                            <li>hodina / 150 Kč</li>
+                            <li>den / 1 200 Kč</li>
 
 
                             <li> 1 týden / 6000 Kč</li>
@@ -101,7 +101,7 @@
 
 
 
-
+-->
 
 
 
@@ -122,44 +122,90 @@
     </symbol>
 </svg>
 
+
+
+
+
+
+
 <div class="container py-3">
 
     <main>
 
-        <h5 class="display-6 text-center mb-4">Další služby </h5>
 
         <div class="table-responsive">
-            <table class="table text-center">
+            <table class="table text-start">
                 <tbody>
                     <tr>
-                        <th style="width: 34%;"></th>
-                        <th style="width: 22%;"></th>
+                        <th style="width: 14%;">Služby</th>
+                        <th style="width: 22%;">Započitáno v ceně</th>
+                        <th style="width: 22%;">Cena</th>
 
                     </tr>
 
 
 
+                    </tr>
                     <tr>
-                        <th scope="row" class="text-start">Vodácký výlet</th>
-                        <td>1000 Kč / den / 1. os.</td>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Výlet pro skupinu (6 dětí)</small></p>
+                        </th>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">jídlo, jízdné, ubytování, průvodce</small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / den / </small><span class="fw-light">400 Kč</span></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Kurz programování pc. her</small></p>
+                        </th>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">notebook, lektor</small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / hodina / </small><span class="fw-light">100 Kč</span></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Kurz lukostřelby pro začátečníky</small></p>
+                        </th>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">lukostřelecké vybavení, lektor</small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / den / </small><span class="fw-light">400 Kč</span></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Vodácký výlet
+                        </th></small></p>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">lodě a vybavení, jídlo, ubytování, doprava, průvodce</small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / den / </small><span class="fw-light">1000 Kč</span></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Profesionální průvodce</small></p>
+                        </th>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">průvodce / lektror </small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">hodina / </small><span class="fw-light">150 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">24. hod. / </small><span class="fw-light">1200 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">týden / </small><span class="fw-light">6000 Kč</span></p>
 
+                        </th>
                     </tr>
-                    <tr>
-                        <th scope="row" class="text-start">Kurz programování her</th>
-                        <td>1,5 hodiny / 200 Kč</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-start">Kurz lukostřelby</th>
-                        <td>1 hodina / 400 Kč</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-start">Seženu spoluúčastníky (4 děti do skupiny)</th>
-                        <td>1000 Kč</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-start">Kurz lyžování</th>
-                        <td>dohodou</td>
-                    </tr>
+
+
 
                 </tbody>
 

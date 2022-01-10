@@ -337,7 +337,7 @@
                     </div>
                     <div>
                         <h4 class="display-7">Organizace</h4>
-                        <p class="lead">Mladí dobrodruzi, z.s., je decentralizovaná <b>skautská organizace</b>, postavená na svobodných principech, jejímž cílem je tvořit pro děti příležitosti k seberozvoji, podporovat je ve zdravém životním stylu. Kráčíme ve šlépějích dvou můžů, Roberta Badena Powella a Ernesta Thompsona Setona, navazujeme na jejich směr, máme zákon a slib. </p>
+                        <p class="lead">Mladí dobrodruzi, z.s., je decentralizovaná <b>skautská organizace</b>, postavená na svobodných principech, jejímž cílem je tvořit pro děti příležitosti k seberozvoji, podporovat je ve zdravém životním stylu. Kráčíme ve šlépějích dvou mužů, Roberta Badena Powella a Ernesta Thompsona Setona, navazujeme na jejich směr, máme zákon a slib. </p>
 
                     </div>
                 </div>
