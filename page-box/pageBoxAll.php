@@ -793,7 +793,9 @@
 
 
 
-
+        </div>
+    </div>
+    </div>
 
 
 
@@ -1014,4 +1016,208 @@
 
 
     </div>
+</div>
+
+
+
+
+
+<div class="bg-light  mb-5 mt-5">
+    <!-- bg-light  -->
+    <div class="container marketing col-xxl-8 px-4 py-5">
+
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <p><i class="fad fa-thumbs-up  text-primary" style="font-size: 45px"></i></p>
+
+                <h4 class="fw-bold">Věk
+                </h4>
+                <p class="fw-light">od 8 do 15 let</p>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <p><i class="fad fa-hand-holding-heart text-primary" style="font-size: 45px"></i></p>
+
+                <h4 class="fw-bold">Cena</h4>
+                <p class="fw-light">2 hodiny / 1 os. / 200 Kč
+                </p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+            <div class="col-lg-4">
+                <p><i class="fad fa-graduation-cap text-primary" style="font-size: 45px"></i></p>
+
+
+
+                <h4 class="fw-bold">Kurz</h4>
+                <p class=" fw-light">pro jednoho účastníka </p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+
+
+            <div class="col-lg-4">
+                <p><i class="fad fa-laptop-code text-primary" style="font-size: 45px"></i></p>
+
+
+
+                <h4 class="fw-bold">Co</h4>
+                <p class=" fw-light">základy programování</p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+
+
+            <div class="col-lg-4">
+                <p><i class="fad fa-calendar-alt text-primary" style="font-size: 45px"></i></p>
+
+
+
+                <h4 class="fw-bold">Kdy</h4>
+                <p class=" fw-light">zobrazit volné termíny</p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+
+            <div class="col-lg-4">
+                <p><i class="fad fa-caravan-alt text-primary" style="font-size: 45px"></i></p>
+
+
+
+                <h4 class="fw-bold">Kde</h4>
+                <p class=" fw-light">v pojizdné učebně</p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container py-3">
+
+
+    <h2>Volné termíny</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Pondělí</th>
+                    <th scope="col">Pátek</th>
+                    <th scope="col">Sobota</th>
+                    <th scope="col">Neděle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>16.00 - 18.00</td>
+                    <td>obsazený termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                </tr>
+                <tr>
+                    <td>16.00 - 18.00</td>
+                    <td>obsazený termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="container py-3">
+
+
+    <h2>Volné termíny</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">16.00 - 18.00</th>
+                    <th scope="col">Pátek</th>
+                    <th scope="col">Sobota</th>
+                    <th scope="col">Neděle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pondělí</td>
+                    <td>obsazený termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                </tr>
+                <tr>
+                    <td>16.00 - 18.00</td>
+                    <td>obsazený termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                    <td>volný termín</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+<div class="container py-3">
+
+
+    <h2>Volné termíny</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Otevírací doba</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pondělí</td>
+                    <td>16.00 - 20.00</td>
+
+                </tr>
+                <tr>
+                    <td>Sobota</td>
+                    <td>8.00 - 20.00</td>
+
+                </tr>
+
+                <tr>
+                    <td>Neděle</td>
+                    <td>8.00 - 20.00</td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
 </div>

@@ -6,13 +6,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mladí dobrodruzi">
+    <meta name="description" content="dobrodruzi">
     <link rel="shortcut icon" href="admin/favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="iconpro/css/all.css" rel="stylesheet">
     <link href="mystyle.css" rel="stylesheet">
 
-    <title>Výlety a kurzy pro děti od 6 do 15 let.
+    <title>Výlety a kurzy pro Vaše děti
     </title>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
@@ -21,78 +21,108 @@
 
 <body>
 
-    <aside>
 
 
 
 
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-0 pt-2">
-                <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+
+    <div class="container">
+        <nav class="d-flex flex-wrap justify-content-center py-3 pt-3">
+            <a href="http://dobrodruzi.cz" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
 
-                    <span class="fs-3" style="">DOBRO<span class=" text-black"><b>SKAUT</b><br>
-                            <p class="fs-6 text-black">Petr Lízal - průvodce dětí</p>
-                        </span>
+                <span class="fs-3 text-black" style=""><b>dobrodruzi<span class=" text-black">.cz</b>
+                    <!--
+                        <p class="fs-6 text-black">
+                            profesionální lektoři
+                        </p>-->
+                </span>
 
 
-                </a>
+            </a>
 
-                <ul class="nav nav-pills mt-3">
+            <ul class="nav nav-pills mt-2">
 
-                    <?php if (isset($_GET["page"])) {
-                        if ($_GET["page"] == "index") {
-                            $active_index = "active";
-                        }
-                        if ($_GET["page"] == "o-mne") {
-                            $active_omne = "active";
-                        }
-                        if ($_GET["page"] == "vylety") {
-                            $active_vylety = "active";
-                        }
-                        if ($_GET["page"] == "cenik") {
-                            $active_cenik = "active";
-                        }
-                        if ($_GET["page"] == "galerie") {
-                            $active_galerie = "active";
-                        }
-                        if ($_GET["page"] == "kontakt") {
-                            $active_kontakt = "active";
-                        }
-                    } ?>
-
-
-                    <?php if (!isset($_GET["page"])) {
-
+                <?php if (isset($_GET["page"])) {
+                    if ($_GET["page"] == "index") {
                         $active_index = "active";
-                    } ?>
+                    }
+                    if ($_GET["page"] == "lektor-petr") {
+                        $active_lektori = "active";
+                    }
+
+                    if ($_GET["page"] == "o-nas") {
+                        $active_onas = "active";
+                    }
+
+                    if ($_GET["page"] == "vylety") {
+                        $active_vylety = "active";
+                    }
+                    if ($_GET["page"] == "kurzy-programovani") {
+                        $active_kurzy_programovani = "active";
+                    }
+                    if ($_GET["page"] == "cenik") {
+                        $active_cenik = "active";
+                    }
+                    if ($_GET["page"] == "kalendar") {
+                        $active_kalendar = "active";
+                    }
+                    if ($_GET["page"] == "galerie") {
+                        $active_galerie = "active";
+                    }
+                    if ($_GET["page"] == "kontakt") {
+                        $active_kontakt = "active";
+                    }
+                }
 
 
-                    <li class="nav-item"><a href="index.php?page=index" class="nav-link <?php echo $active_index ?>" aria-current="page">Úvodní stránka</a></li>
-                    <li class="nav-item"><a href="index.php?page=o-mne" class="nav-link <?php echo $active_omne ?>">O mne</a></li>
-                    <!--<li class="nav-item"><a href="index.php?page=krouzky" class="nav-link">Kroužky</a></li>-->
-                    <li class="nav-item"><a href="index.php?page=vylety" class="nav-link <?php echo $active_vylety ?>">Výlety</a></li>
-                    <li class="nav-item"><a href="index.php?page=cenik" class="nav-link <?php echo $active_cenik ?>">Ceník</a></li>
-                    <li class="nav-item"><a href="galerie.php?page=galerie" class="nav-link <?php echo $active_galerie ?>">Fotogalerie</a></li>
-                    <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link <?php echo $active_kontakt ?>">Kontakt</a></li>
+                if (isset($_GET["sekce"])) {
+                    if ($_GET["sekce"] == "nabizime") {
+                        $active_nabizime = "active";
+                    }
+                }
 
-                    <!--  <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nic</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="galerie.php">Blog</a></li>
-                            <li><a class="dropdown-item" href="index.php?page=all">Šablona</a></li>
-                        </ul>
+
+
+
+                ?>
+
+
+                <?php if (!isset($_GET["page"])) {
+
+                    $active_index = "active";
+                } ?>
+
+
+                <li class="nav-item"><a href="index.php?page=index" class="nav-link <?php echo $active_index ?>" aria-current="page">Úvodní stránka</a></li>
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a href="index.php?page=o-nas" class="nav-link <?php echo $active_onas ?>">O nás</a></li>
+                <!--<a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízíme</a>
+                     <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+                        <li> <a class="dropdown-item" href="index.php?page=vylety&sekce=nabizime" class="nav-link">Výlety na míru</a>
+                        <li> <a class="dropdown-item" href="index.php?page=kurzy-programovani" class="nav-link">Kurzy programování</a>
+
+                    </ul>
                     </li>-->
-                </ul>
-            </header>
-        </div>
+
+
+                <li class="nav-item"><a href="index.php?page=vylety" class="nav-link <?php echo $active_vylety ?>">Výlety</a></li>
+                <li class="nav-item"><a href="index.php?page=kurzy-programovani" class="nav-link <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
+                <li <li class="nav-item"><a href="index.php?page=cenik" class="nav-link <?php echo $active_cenik ?>">Ceník</a></li>
+                <li <li class="nav-item"><a href="index.php?page=kalendar" class="nav-link <?php echo $active_kalendar ?>">Kalendář</a></li>
+                <li class="nav-item"><a href="galerie.php?page=galerie" class="nav-link <?php echo $active_galerie ?>">Fotogalerie</a></li>
+                <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link <?php echo $active_kontakt ?>">Kontakt</a></li>
+
+
+            </ul>
+        </nav>
+    </div>
 
 
 
 
 
-        <!--
+    <!--
 
 
         <nav class="navbar navbar-expand-lg  navbar-light" aria-label="Ninth navbar example" style="background-color: rgb(255, 255, 255);">
@@ -139,16 +169,14 @@
                 </div>
             </div>
 
--->
+            -->
 
-        </nav>
+    </nav>
 
 
 
-    </aside>
+
     <header>
-
-
 
 
         <!--//slide-->
@@ -169,7 +197,7 @@
 
 
                             <h1 class="display-6 fw-bold" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Putujeme přírodou a učíme se novým dovednostem</h1>
-                            <h3 class="text-caption" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Provázíme mladé dobrodruhy na cestách za poznáním</h3>
+                            <p class="text-caption" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Provázíme mladé dobrodruhy na cestách za poznáním</p>
                             <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
                         </div>
                     </div>
@@ -198,8 +226,8 @@
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">VYTVÁŘÍM PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
-                            <h3 style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</h3>
+                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">VYTVÁŘÍME PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
+                            <p style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</p>
                             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>
                     </div>
@@ -221,5 +249,8 @@
 
         </div>
         <!--//slide end-->
+
+
+
 
     </header>

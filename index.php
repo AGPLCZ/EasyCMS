@@ -14,9 +14,14 @@ if (isset($_GET["page"])) {
     }
 
 
-    if ($_GET["page"] == "o-mne") {
+    if ($_GET["page"] == "lektor-petr") {
         require_once  "page-box/box-lektor-petr.php";
     }
+
+    if ($_GET["page"] == "o-nas") {
+        require_once  "page-box/box-o-nas.php";
+    }
+
 
     if ($_GET["page"] == "krouzky") {
         require_once  "page-box/box-krouzky.php";
@@ -26,9 +31,18 @@ if (isset($_GET["page"])) {
         require_once  "page-box/box-vylety.php";
     }
 
+    if ($_GET["page"] == "kurzy-programovani") {
+        require_once  "page-box/box-kurzy-programovani.php";
+    }
+
 
     if ($_GET["page"] == "cenik") {
         require_once  "page-box/box-cenik.php";
+    }
+
+
+    if ($_GET["page"] == "kalendar") {
+        require_once  "page-box/box-kalendar.php";
     }
 
     if ($_GET["page"] == "kontakt") {

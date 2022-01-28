@@ -10,7 +10,7 @@
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-4 mb-0 mt-0 pt-0 pb-0">
 
                 <div class="feature col">
-                    <h3 class="fs-5 text-start text-light lh-base">NABÍZÍME</h3>
+                    <h3 class="fs-5 text-start text-light lh-base">NABÍZÍM</h3>
                     <ul class="list-group fs-6 " style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">VÝLETY</li>
                         <li class="d-flex  fw-light lh-base ">EXPEDICE</li>
@@ -60,7 +60,7 @@
             </div>
 
         </div>
-        <div class="mt-5 fw-light">Copyright © dobrodruzi.club I paralelní společenství I Licence na text Creative Commons CC BY-SA 4.0</div>
+        <div class="mt-5 fw-light">Copyright © dobrodruzi.cz I paralelní společenství I Licence na text Creative Commons CC BY-SA 4.0</div>
     </div>
 
 </footer>
