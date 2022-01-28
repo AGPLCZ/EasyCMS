@@ -31,7 +31,7 @@
             <a href="http://dobrodruzi.cz" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
 
-                <span class="fs-3 text-black" style=""><b>dobrodruzi<span class=" text-black">.cz</b>
+                <span class="fs-3 text-black"><b>dobrodruzi<span class=" text-black">.cz</b>
                     <!--
                         <p class="fs-6 text-black">
                             profesionální lektoři
