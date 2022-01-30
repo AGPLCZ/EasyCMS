@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="dobrodruzi">
+    <meta name="description" content="Výlety a kurzy pro Vaše děti">
+    <meta name="keywords" content="výlety, kurzy, děti">
     <link rel="shortcut icon" href="admin/favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="iconpro/css/all.css" rel="stylesheet">

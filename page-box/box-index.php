@@ -3,7 +3,7 @@
     <container>
 
         <div class="px-4 py-1 my-0 mt-5 text-center">
-            <h1 class="display-6 fw-bold">PRO DĚTI Z BRNA A OKOLÍ</h1>
+            <h1 class="display-6 fw-bold">Výlety a kurzy pro děti z Brna a okolí</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">Vytváříme pro děti příležitosti k všestrannému rozvoji, pořádáme výlety, expedice, kurzy, kroužky, věnujeme se vzdělávání, praktickým dovednostem, sportu a dalším volnočasovým aktivitám a hrám.</p>
                 <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -231,7 +231,7 @@
 
 
             <div class="feature col">
-                <p><img src="img/blog/b1.jpg" alt="" class="img-fluid" /></p>
+                <p><img src="img/blog/sm-b1.jpg" alt="" class="img-fluid" /></p>
                 <!--<h3 class="fs-5">Respekt</h3>-->
                 <p class="fw-light lh-base">Děti se učí žít v kolektivu, konstruktivně řešit sociální situace a respektovat domluvená pravidla.</p>
 
@@ -240,7 +240,7 @@
 
 
             <div class="feature col">
-                <p><img src="img/blog/b4.jpg" alt="" class="img-fluid" /></p>
+                <p><img src="img/blog/sm-b4.jpg" alt="" class="img-fluid" /></p>
                 <!--<h3 class="fs-5">Svoboda</h3>-->
                 <p class="fw-light lh-base"> Vytvářejí si pozitivní vztah sami k sobě, a neustále na sobě pracují. Podporujeme jejich kreativitu a zručnost.</p>
 
@@ -250,7 +250,7 @@
 
 
             <div class="feature col">
-                <p><img src="img/blog/b2.jpg" alt="" class="img-fluid" /></p>
+                <p><img src="img/blog/sm-b2.jpg" alt="" class="img-fluid" /></p>
                 <!--<h3 class="fs-5">Zodpovědnost</h3>-->
                 <p class="fw-light lh-base">Poznávají hodnotu přátelství a sdílení, prožívají společně rituály. Osvojují si správné řešení konfliktů a efektivní komunikaci.</p>
 
@@ -323,22 +323,40 @@
 
 
 
+    <div class="px-4 py-1 my-3 text-center">
+        <h1 class="display-6 fw-bold">Nyní jsou nejžádanější kurzy programování</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Děti učíme programovat, vytváříme počítačové hry, a trávíme čas ve zdravém prostředí.</p>
+        </div>
+        <a href="http://dobrodruzi.cz/index.php?page=kurzy-programovani" type="button" class="btn btn-primary btn-lg px-4 gap-3">Více o kurzech</a>
+    </div>
 
 
 
 
-
+    <!--
 
     <div class="px-4 py-1 my-3 text-center">
         <h1 class="display-6 fw-bold">Pro děti z Brna a okolí</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Zobrazit na mapě <a href="https://goo.gl/maps/itTNU4573LkMN6Jj7" target="_blank">seznam míst kde se scházíme</a></p>
         </div>
+
+    </div>
+
+    <!--
+
+    <div class=" px-4 py-1 my-5 mt-0 text-center">
+        <div class="col-lg-8 mx-auto">
+            
+    <div class="wp-block-uagb-google-map uagb-google-map__wrap uagb-block-234f1971"><iframe class="uagb-google-map__iframe" title="Google Map for 49°10'38.4&quot;N 16°33'06.3&quot;E" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsd_d46higiozY-zNqtr7zdA81Soswje4&amp;q=49%C2%B010'38.4%22N%2016%C2%B033'06.3%22E&amp;zoom=15&amp;language=cs" style="width:100%; height:307px"></iframe></div>
+
     </div>
 
 
+    </div>-->
 
-
+    <!--
     <div class="container marketing col-xxl-8 px-4 py-0">
 
 
@@ -382,9 +400,9 @@
                 </button>
             </div>
         </div>
-
+     
 
     </div>
     </div>
-
+   -->
 </main>
