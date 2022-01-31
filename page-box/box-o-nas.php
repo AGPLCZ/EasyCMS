@@ -1,5 +1,5 @@
 <div class="px-0 py-1 my-0 pt-5 text-center">
-    <h3 class="display-6 fw-bold">O klubu</h3>
+    <h3 class="display-6 fw-bold">O nás</h3>
     <div class="col-lg-6 mx-auto">
     </div>
 </div>
@@ -19,8 +19,8 @@
 
             </div>
             <div>
-                <h4 class="display-7">Organizace</h4>
-                <p class="lead">Naše decentralizovaná <b>skautská organizace</b> je postavená na svobodných principech, jejímž cílem je tvořit pro děti příležitosti k seberozvoji, podporovat je ve zdravém životním stylu. Kráčíme ve šlépějích dvou mužů, Roberta Badena Powella a Ernesta Thompsona Setona, a navazujeme na jejich směr.</p>
+                <h4 class="display-7">Jsme malá parta lidí</h4>
+                <p class="lead">Jsme profesionálními lektoři, průvodci, instruktoři, jsme nejen zkušenými cestovateli, ale rozumíme i respektující výchově.</p>
 
             </div>
         </div>
@@ -29,8 +29,9 @@
                 <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
             </div>
             <div>
-                <h4 class="display-7">Profesionální lektroři</h4>
-                <p class="lead">Výjimečnost našeho klubu spočívá ve spolupráci s profesionálními průvodci, kteří jsou nejen zkušenými cestovateli, ale <b>rozumí i respektující výchově</b>. Právě to je velká výhoda oproti jiným dobrovolnickým organizacím, protože v nich často působí mladí lidé, kteří nemají dostatečné znalosti a schopnosti. „Naši průvodci jsou schopni neustále růst a rozvíjet se.“</p>
+                <h4 class="display-7">Nabízíme profesionální šlužby pro děti</h4>
+
+                <p class="lead">Nabízíme dětem příležitosti, velkým dobrodruhům pomáháme uskutečnit náročné expedice, naopak mladším rádi uspořádáme dobrodružný výlet na míru, v nabídce máme nejrůznější kurzy, během roku pořádáme různorodé kroužky.</p>
 
             </div>
         </div>

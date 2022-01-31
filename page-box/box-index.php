@@ -3,7 +3,8 @@
     <container>
 
         <div class="px-4 py-1 my-0 mt-5 text-center">
-            <h1 class="display-6 fw-bold">Výlety a kurzy pro děti z Brna a okolí</h1>
+            <h1 class="display-6 fw-bold">PRO DĚTI Z BRNA A OKOLÍ
+            </h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">Vytváříme pro děti příležitosti k všestrannému rozvoji, pořádáme výlety, expedice, kurzy, kroužky, věnujeme se vzdělávání, praktickým dovednostem, sportu a dalším volnočasovým aktivitám a hrám.</p>
                 <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -45,7 +46,7 @@
 
 
                         <div class="mb-5">
-                            <a href="https://dobrodruzi.club/info/" class="btn btn-primary btn-lg px-4" target="_blank">Klub mladých dobrodruhů &raquo;</a>
+                            <a href="https://dobrodruzi.club/" class="btn btn-primary btn-lg px-4" target="_blank">Klub mladých dobrodruhů &raquo;</a>
                         </div>
 
 
@@ -157,51 +158,51 @@
     <div class=" text-secondary px-4 pt-5 pb-5 mt-5 mb-5   text-center bg-light">
         <h1 class="display-6  text-black">Dáváme možnost říct<span class="text-primary"> „ne“</span></h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4 text-black"">Ve skupině vytváříme skutečné dohody, hledáme podstatu názorů a potřeb, následně společně tvoříme přijatelná řešení. Akceptujeme volbu a přirozené následky.
-</p>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class=" container px-4 py-5" id="hanging-icons">
-
-
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square text-dark flex-shrink-0 me-3">
-                        <i class="fas fas fa-arrows-alt text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
-
-
-                    </div>
-                    <div>
-                        <h4 class="display-7">Připravujeme řízený program formou nabídky</h4>
-                        <p>Využíváme <b>vnitřní motivace</b> dětí, aby se mohly věnovat věcem proto, že v nich vidí <b>smysl</b>, že je baví a že samy chtějí.</p>
-
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square text-dark flex-shrink-0 me-3">
-                        <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
-                    </div>
-                    <div>
-                        <h4 class="display-7">„Jsme pro děti parťáci, ne diktátor“</h4>
-                        <p>Děti vedeme k samostatnosti, přistupujeme k nim individuálně a s <b>respektem</b>. Zajišťujeme bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení.</p>
-
-                    </div>
-                </div>
-
-
-            </div>
+            <p class="lead mb-4 text-black">Ve skupině vytváříme skutečné dohody, hledáme podstatu názorů a potřeb, následně společně tvoříme přijatelná řešení. Akceptujeme volbu a přirozené následky.
+            </p>
         </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class=" container px-4 py-5" id="hanging-icons">
+
+
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square text-dark flex-shrink-0 me-3">
+                    <i class="fas fas fa-arrows-alt text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
+
+
+                </div>
+                <div>
+                    <h4 class="display-7">Připravujeme řízený program formou nabídky</h4>
+                    <p>Využíváme <b>vnitřní motivace</b> dětí, aby se mohly věnovat věcem proto, že v nich vidí <b>smysl</b>, že je baví a že samy chtějí.</p>
+
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square text-dark flex-shrink-0 me-3">
+                    <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
+                </div>
+                <div>
+                    <h4 class="display-7">„Jsme pro děti parťáci, ne diktátor“</h4>
+                    <p>Děti vedeme k samostatnosti, přistupujeme k nim individuálně a s <b>respektem</b>. Zajišťujeme bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení.</p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
     </div>
 
@@ -308,7 +309,7 @@
 
 
                     <h4 class="fw-bold">Ceny</h4>
-                    <p class=" fw-light">Dopravu, jídlo a ubytování na výletech si hradí členové sami (výdaje v řádu stokorun). Více informací najdete na stránce <a href="https://dobrodruzi.cz/index.php?page=cenik">Ceny.</a></p>
+                    <p class=" fw-light">Dopravu, jídlo a ubytování na výletech si hradí děti sami (výdaje v řádu stokorun). Více informací najdete na stránce <a href="https://dobrodruzi.cz/index.php?page=cenik">Ceny.</a></p>
 
                 </div><!-- /.col-lg-4 -->
 

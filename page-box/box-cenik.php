@@ -1,7 +1,7 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
     <h1 class="display-5 fw-bold">Jaké jsou náklady na naše dobrodružství?</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Povinné členské příspěvky nevybíráme, přesto bez vaší finanční podpory nemůžeme dělat to, co děláme; shledáváte-li naši činnost smysluplnou, budeme rádi, když naši práci oceníte.
+        <p class="lead mb-4">Bez vaší finanční podpory nemůžeme dělat to, co děláme; shledáváte-li naši činnost smysluplnou, budeme rádi, když naši práci oceníte.
         </p>
 
     </div>
@@ -21,7 +21,7 @@
                 </div>
                 <div>
                     <h2>Jednodenní výlety</h2>
-                    <p>Při jednodenním výletě se svačinou z domova většinou utratíme 200 až 400 korun za dopravu a nejrůznější vstupné, v ceně jsou i profesionální průvodcovské služby.</p>
+                    <p>Při jednodenním výletě se svačinou z domova většinou utratíme 400 až 1000 korun za dopravu a nejrůznější vstupné, v ceně jsou i profesionální průvodcovské služby.</p>
 
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div>
                     <h2>Kurzy a kroužky</h2>
-                    <p>Účast dětí na některých kroužcích a kurzech je zdarma, naopak některé s profesionálními lektory a průvodci máme spoplatněny.</p>
+                    <p>Účast dětí na některých kroužcích a kurzech je zdarma, naopak některé máme spoplatněny. Pravidelné akce - 400 až 1000 Kč / měsíc. Jednorázové akce - 150 až 1000 Kč</p>
 
 
 
