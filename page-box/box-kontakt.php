@@ -30,7 +30,7 @@
 
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Číslo bankovního účtu: <b>1004823041/3030</b></li>
+                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Číslo bankovního účtu: <b>1004823025/3030</b></li>
                 <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Bitcoin adresa: bc1qp3fnwmd34ztur5gruj7h42qq37ndhhhsudt79r</a></li>
                 <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> IČO: 14305631</a></li>
 

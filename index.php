@@ -45,6 +45,11 @@ if (isset($_GET["page"])) {
     }
 
 
+    if ($_GET["page"] == "kurzy-vodactvi") {
+        require_once  "page-box/box-kurzy-vodactvi.php";
+    }
+
+
     if ($_GET["page"] == "cenik") {
         require_once  "page-box/box-cenik.php";
     }

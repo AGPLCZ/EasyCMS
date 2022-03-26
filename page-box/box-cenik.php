@@ -214,7 +214,7 @@
                             <p class="card-title pricing-card-title"><small class="fw-light">notebook, lektor, veřejné prostory</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / hodina / </small><span class="fw-light">150 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 2 hodiny / </small><span class="fw-light">125 Kč</span></p>
                         </th>
                     </tr>
 
@@ -375,6 +375,6 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
 
     <h4>Děkujeme za podporu!</h4>
-    <p>1004823041/3030 - variabilní symbol: 1050</p>
+    <p>1004823025/3030 - variabilní symbol: 1050</p>
 </div>
 </div>

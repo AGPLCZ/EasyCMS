@@ -79,6 +79,11 @@
                         $active_kurzy_lukostrelby = "active";
                     }
 
+
+                    if ($_GET["page"] == "kurzy-vodactvi") {
+                        $active_kurzy_vodactvi = "active";
+                    }
+
                     if ($_GET["page"] == "cenik") {
                         $active_cenik = "active";
                     }
@@ -121,6 +126,7 @@
                     <li><a href="index.php?page=kurzy-programovani" class="dropdown-item <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
                     <li><a href="index.php?page=krouzek-programovani" class="dropdown-item <?php echo $active_krouzek_programovani ?>">Kroužek programování</a></li>
                     <li><a href="index.php?page=kurzy-lukostrelby" class="dropdown-item <?php echo $active_kurzy_lukostrelby ?>">Kurzy lukostřelby</a></li>
+                    <li><a href="index.php?page=kurzy-vodactvi" class="dropdown-item <?php echo $active_kurzy_vodactvi ?>">Vodácký výlet</a></li>
 
                 </ul>
                 </li>

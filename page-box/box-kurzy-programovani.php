@@ -49,7 +49,7 @@
                 <p><i class="fad fa-hand-holding-heart text-primary" style="font-size: 45px"></i></p>
 
                 <h4 class="fw-bold">Cena</h4>
-                <p class="fw-light">1 os. / měsíc / 500 Kč
+                <p class="fw-light">1 os. / měsíc / 400 Kč
                 </p>
             </div>
 
