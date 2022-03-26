@@ -86,7 +86,7 @@
                     <p class="lead">Přátele mi říkají AG („Ejdží“), je mi 33 let, již 18 let působím jako skautský vedoucí ve své rodné vesnici. Pravidelně se podílím na pořádání letních táborů pro děti, organizoval jsem desítky jednodenních i vícedenních výletů. Absolvoval zdravotnický kurz, který mě naučil základům první pomoci a připravil mě dostatečně i na případně krizové situace.
                         ​</p>
                     <p class="lead">
-                        Věnoval jsem dětem již tisíce hodin a statisíce korun ze své kapsy. Jako každý člověk <b>mám ve svém životě omezený zdroj času, rád daruji část svého, přesto</b> další část musím investovat do práce která mě uživí.​ Nabízím dětem placené kurzy, výlety, kroužky, je to práce jako každá jiná. Už od počátku věků lidé si vyměňují užitečné služby skrze peníze, zkrátka protože je to pro obě strany výhodné a mají z toho užitek.​
+                        Věnoval jsem dětem již tisíce hodin a statisíce korun ze své kapsy. Jako každý člověk <b>mám ve svém životě omezený zdroj času, rád daruji část svého, přesto</b> další část musím investovat do práce která mě uživí.​ Nabízím dětem placené kurzy, výlety, kroužky, je to práce jako každá jiná. Už od počátku věků lidé si vyměňují užitečné služby skrze peníze, zkrátka protože je to pro obě strany výhodné a mají z toho užitek.
                     </p>
 
 

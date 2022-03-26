@@ -2,7 +2,9 @@
 ?>
 <script src="js/bootstrap.bundle.min.js"></script>
 <footer>
-    <div class="bg-dark text-secondary px-4 py-5 text-center mt-5 mb-0">
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center mt-5 mb-0" style="background-image: linear-gradient(rgba(33, 37, 41, 0.6),rgba(33, 37, 41, 0.9)),url('img/slide/brno.png'); background-position: left 50%">
+
 
 
         <div class=" container">
@@ -10,7 +12,7 @@
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-4 mb-0 mt-0 pt-0 pb-0">
 
                 <div class="feature col">
-                    <h3 class="fs-5 text-start text-light lh-base">NABÍZÍM</h3>
+                    <h3 class="fs-5 text-start text-light lh-base">NABÍZÍME</h3>
                     <ul class="list-group fs-6 " style="color: rgb(212, 212, 212)">
                         <li class="d-flex  fw-light lh-base ">VÝLETY</li>
                         <li class="d-flex  fw-light lh-base ">EXPEDICE</li>
@@ -60,7 +62,7 @@
             </div>
 
         </div>
-        <div class="mt-5 fw-light">Copyright © dobrodruzi.cz I paralelní společenství I Licence na text Creative Commons CC BY-SA 4.0</div>
+        <div class="mt-5 fw-light">Copyright © dobrodruzi.cz I paralelní svobodné společenství I Licence na text Creative Commons CC BY-SA 4.0</div>
     </div>
 
 </footer>

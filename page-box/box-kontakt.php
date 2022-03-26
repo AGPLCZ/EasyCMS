@@ -15,24 +15,42 @@
 <div class="container my-5">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
         <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <h1 class="display-5 fw-bold lh-1">Jsme malá parta lidí, která pro děti vytváří příležitosti k seberozvoji</h1>
+            <h3 class="display-6 fw-bold lh-2">Když potřebujete průvodce či lektora pro Vašeho mladého dobrodruha</h3>
             <p class="lead">
-                Výjimečnost našeho klubu spočívá ve spolupráci s profesionálními průvodci, kteří jsou nejen zkušenými cestovateli, ale rozumí i respektující výchově.
+                Vaše finanční dary svým způsobem vracím dětem - variabilní symbol: 1050
+            </p>
+            <p class="lead fw-bold">
+                Kontakt - Petr Lízal
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                <p class="px-4 text-primary"><i class="fa fa-leaf text-primary" aria-hidden="true"></i> Petr Lízal - průvodce dětí</p>
-                <p href="info@dobrodruzi.cz" class="px-4 text-primary me-md-2">info@dobrodruzi.cz</a>
-                <p class="px-4 text-primary">SMS: 735 528 343</p>
+                <p class="px-4 text-primary"><i class="fa fa-leaf text-primary" aria-hidden="true"></i> průvodce dětí, lektor</p>
+                <p href="info@dobrodruzi.cz" class="px-4 text-primary me-md-2"><i class="fa fa-leaf text-primary" aria-hidden="true"></i> info@dobrodruzi.cz</a>
+                <p class="px-4 text-primary"><i class="fa fa-leaf text-primary" aria-hidden="true"></i> SMS: 735 528 343</p>
 
 
             </div>
             <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Číslo bankovního účtu: <b>1004823041/3030</b></li>
+                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Bitcoin adresa: bc1qp3fnwmd34ztur5gruj7h42qq37ndhhhsudt79r</a></li>
+                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> IČO: 14305631</a></li>
+
+
+
+                <!--   <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> IČO: 09234373</a></li>-->
+
+            </ul>
+
+            <!-- <ul class="list-group list-group-flush">
+                <p class="lead">
+                    Výjimečnost klubu spočívá ve spolupráci s profesionálními průvodci, kteří jsou nejen zkušenými cestovateli, ale rozumí i respektující výchově.
+                </p>
                 <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> Mladí dobrodruzi, z.s.</a></li>
 
                 <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> IČO: 09234373</a></li>
 
-                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> AZ TOWER – Pražákova 1008/69, Štýřice, 639 00 Brno</a></li>
+                <li class="list-group-item"><a class="text-decoration-none link-dark"><i class="fa fa-leaf" aria-hidden="true"></i> AZ TOWER – Pražákova 1008/69, Štýřice, 639 00 Brno</a></li></ul>-->
         </div>
+
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
             <img class="rounded-lg-3" src="img/page/ja2.jpg" alt="">
         </div>

@@ -31,7 +31,7 @@
             <div>
                 <h4 class="display-7">Nabízíme profesionální šlužby pro děti</h4>
 
-                <p class="lead">Nabízíme dětem příležitosti, velkým dobrodruhům pomáháme uskutečnit náročné expedice, naopak mladším rádi uspořádáme dobrodružný výlet na míru, v nabídce máme nejrůznější kurzy, během roku pořádáme různorodé kroužky.</p>
+                <p class="lead">Velkým dobrodruhům pomáháme uskutečnit náročné expedice, naopak mladším rádi uspořádáme dobrodružný výlet na míru, v nabídce máme nejrůznější kurzy, během roku pořádáme různorodé kroužky.</p>
 
             </div>
         </div>
@@ -147,7 +147,7 @@
                     <p class="lead">Přátele mi říkají AG („Ejdží“), je mi 33 let, již 18 let působím jako skautský vedoucí ve své rodné vesnici. Pravidelně se podílím na pořádání letních táborů pro děti, organizoval jsem desítky jednodenních i vícedenních výletů. Absolvoval <b>zdravotnický kurz</b>, který mě naučil základům první pomoci a připravil mě dostatečně i na případně krizové situace.
                         ​</p>
                     <p class="lead">
-                        Věnoval jsem dětem již tisíce hodin a statisíce korun ze své kapsy. Jako každý člověk mám ve svém životě <b>omezený zdroj času, rád daruji část svého</b>, přesto další část musím investovat do práce která mě uživí.​ Nabízím dětem placené kurzy, výlety, kroužky, je to práce jako každá jiná. Už od počátku věků lidé si vyměňují <b>užitečné služby</b> skrze peníze, zkrátka protože je to pro obě strany výhodné.​
+                        Věnoval jsem dětem již tisíce hodin a statisíce korun ze své kapsy. Jako každý člověk mám ve svém životě <b>omezený zdroj času, rád daruji část svého</b>, přesto další část musím investovat do práce která mě uživí.​ Nabízím dětem placené kurzy, výlety, kroužky, je to práce jako každá jiná. Už od počátku věků lidé si vyměňují <b>užitečné služby</b> skrze peníze, zkrátka protože je to pro obě strany výhodné a mají z toho užitek.
                     </p>
 
 
@@ -179,7 +179,7 @@
 
                 <h5>Svoboda a zodpovědnost
                 </h5>
-                <p class="fw-light">Jsem přesvědčen, že si každý o svém životě dokáže nejlépe rozhodovat sám. Všechny neznásilněné děti se rády učí už od přírody, není je potřeba nutit a brát jim jejich zodpovědnost za svůj život.</p>
+                <p class="fw-light">Jsem přesvědčen, že si každý o svém životě dokáže nejlépe rozhodovat sám. Všechny svobodné děti se rády učí už od přírody, není je potřeba nutit a brát jim jejich zodpovědnost za svůj život.</p>
 
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">

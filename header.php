@@ -32,17 +32,26 @@
             <a href="http://dobrodruzi.cz" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
 
-                <span class="fs-3 text-black"><b>dobrodruzi<span class=" text-black">.cz</b>
+                <span class="fs-3 text-black">
                     <!--
-                        <p class="fs-6 text-black">
-                            profesionální lektoři
-                        </p>-->
+                        fa-duotone fa-chalkboard-user              
+                        fa-light fa-comment-smile
+                    fa-regular fa-users-gear
+                    <i class="fa-duotone fa-comment-smile"></i>
+                    <i class="fa-duotone fa-campfire"></i>
+                    <i class="fa-duotone fa-face-awesome"></i>
+                    <i class="fa-light fa-campfire"></i>
+                --> <i class="fa-light fa-campfire  text-primary" style="font-size: 25px"></i> <b>dobrodruzi<span class=" text-black">.cz</b>
+
+                    <p class="fs-6 text-black">
+                        <i>profesionální průvodci a lektoři</i>
+                    </p>
                 </span>
 
 
             </a>
 
-            <ul class="nav nav-pills mt-2">
+            <ul class="nav nav-pills mt-4">
 
                 <?php if (isset($_GET["page"])) {
                     if ($_GET["page"] == "index") {
@@ -62,6 +71,14 @@
                     if ($_GET["page"] == "kurzy-programovani") {
                         $active_kurzy_programovani = "active";
                     }
+                    if ($_GET["page"] == "krouzek-programovani") {
+                        $active_krouzek_programovani = "active";
+                    }
+
+                    if ($_GET["page"] == "kurzy-lukostrelby") {
+                        $active_kurzy_lukostrelby = "active";
+                    }
+
                     if ($_GET["page"] == "cenik") {
                         $active_cenik = "active";
                     }
@@ -98,17 +115,18 @@
                 <li class="nav-item"><a href="index.php?page=index" class="nav-link <?php echo $active_index ?>" aria-current="page">Úvodní stránka</a></li>
                 <li class="nav-item dropdown">
                 <li class="nav-item"><a href="index.php?page=o-nas" class="nav-link <?php echo $active_onas ?>">O nás</a></li>
-                <!--<a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízíme</a>
-                     <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
-                        <li> <a class="dropdown-item" href="index.php?page=vylety&sekce=nabizime" class="nav-link">Výlety na míru</a>
-                        <li> <a class="dropdown-item" href="index.php?page=kurzy-programovani" class="nav-link">Kurzy programování</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízíme</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+                    <li><a href="index.php?page=vylety" class="dropdown-item <?php echo $active_vylety ?>">Výlety</a></li>
+                    <li><a href="index.php?page=kurzy-programovani" class="dropdown-item <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
+                    <li><a href="index.php?page=krouzek-programovani" class="dropdown-item <?php echo $active_krouzek_programovani ?>">Kroužek programování</a></li>
+                    <li><a href="index.php?page=kurzy-lukostrelby" class="dropdown-item <?php echo $active_kurzy_lukostrelby ?>">Kurzy lukostřelby</a></li>
 
-                    </ul>
-                    </li>-->
+                </ul>
+                </li>
 
 
-                <li class="nav-item"><a href="index.php?page=vylety" class="nav-link <?php echo $active_vylety ?>">Výlety</a></li>
-                <li class="nav-item"><a href="index.php?page=kurzy-programovani" class="nav-link <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
+
                 <li <li class="nav-item"><a href="index.php?page=cenik" class="nav-link <?php echo $active_cenik ?>">Ceník</a></li>
                 <li <li class="nav-item"><a href="index.php?page=kalendar" class="nav-link <?php echo $active_kalendar ?>">Kalendář</a></li>
                 <li class="nav-item"><a href="galerie.php?page=galerie" class="nav-link <?php echo $active_galerie ?>">Fotogalerie</a></li>

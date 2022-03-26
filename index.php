@@ -35,6 +35,15 @@ if (isset($_GET["page"])) {
         require_once  "page-box/box-kurzy-programovani.php";
     }
 
+    if ($_GET["page"] == "krouzek-programovani") {
+        require_once  "page-box/box-krouzek-programovani.php";
+    }
+
+
+    if ($_GET["page"] == "kurzy-lukostrelby") {
+        require_once  "page-box/box-kurzy-lukostrelby.php";
+    }
+
 
     if ($_GET["page"] == "cenik") {
         require_once  "page-box/box-cenik.php";

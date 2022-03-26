@@ -270,7 +270,7 @@
 
             </table>
             <p class="card-title pricing-card-title fs-6 text-secondary"><small class="fw-light">
-                    Placené činnosti musí za své členy hradit klub profesionálním lektorům, na základě vašeho výběru (jak moc zatížíte finančně klub) Vám vystavíme měsíční členský příspěvek.
+                    <!-- Placené činnosti musí za své členy hradit klub profesionálním lektorům, na základě vašeho výběru (jak moc zatížíte finančně klub) Vám vystavíme měsíční členský příspěvek.-->
                 </small></p>
         </div>
     </main>
@@ -375,6 +375,6 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
 
     <h4>Děkujeme za podporu!</h4>
-    <p>Účet naší organizace: 1033128988/6100</p>
+    <p>1004823041/3030 - variabilní symbol: 1050</p>
 </div>
 </div>
