@@ -208,13 +208,27 @@
                     </tr>
                     <tr>
                         <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">Průvodcovské / lektorské služby
+                        </th></small></p>
+                        <th scope="row" class="text-start">
+                            <p class="card-title pricing-card-title"><small class="fw-light">
+                                    průvodce / lektror pro skupinu nebo jednotlivce</small></p>
+                        </th>
+                        <th>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">den / </small><span class="fw-light">1000 Kč</span></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-start">
                             <p class="card-title pricing-card-title"><small class="fw-light">Kurz programování pc. her</small></p>
                         </th>
                         <th scope="row" class="text-start">
                             <p class="card-title pricing-card-title"><small class="fw-light">notebook, lektor, veřejné prostory</small></p>
+                            <p class="card-title pricing-card-title"><small class="fw-light">jednou týdně</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 2 hodiny / </small><span class="fw-light">125 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">125 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">400 Kč</span></p>
                         </th>
                     </tr>
 
@@ -224,9 +238,11 @@
                         </th>
                         <th scope="row" class="text-start">
                             <p class="card-title pricing-card-title"><small class="fw-light">lukostřelecké vybavení, lektor</small></p>
+                            <p class="card-title pricing-card-title"><small class="fw-light">jednou týdně</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / hodina / </small><span class="fw-light">300 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">300 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">400 Kč</span></p>
                         </th>
                     </tr>
                     <tr>
@@ -249,6 +265,7 @@
                         </th>
                         <th>
                             <p class="card-title pricing-card-title"><small class="text-muted fw-light">hodina / </small><span class="fw-light">150 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">den / </small><span class="fw-light">1000 Kč</span></p>
                             <p class="card-title pricing-card-title"><small class="text-muted fw-light">24. hod. / </small><span class="fw-light">1200 Kč</span></p>
                             <p class="card-title pricing-card-title"><small class="text-muted fw-light">týden / </small><span class="fw-light">6000 Kč</span></p>
 
@@ -265,6 +282,7 @@
                             <p class="card-title pricing-card-title"><small class="text-muted fw-light">doplněk / </small><span class="fw-light">1000 Kč</span></p>
                         </th>
                     </tr>
+
                 </tbody>
 
 

@@ -122,11 +122,20 @@
                 <li class="nav-item"><a href="index.php?page=o-nas" class="nav-link <?php echo $active_onas ?>">O nás</a></li>
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízíme</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
-                    <li><a href="index.php?page=vylety" class="dropdown-item <?php echo $active_vylety ?>">Výlety</a></li>
-                    <li><a href="index.php?page=kurzy-programovani" class="dropdown-item <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
-                    <li><a href="index.php?page=krouzek-programovani" class="dropdown-item <?php echo $active_krouzek_programovani ?>">Kroužek programování</a></li>
-                    <li><a href="index.php?page=kurzy-lukostrelby" class="dropdown-item <?php echo $active_kurzy_lukostrelby ?>">Kurzy lukostřelby</a></li>
+                    <li style="text-align:center"><br><b>Výlety</b></li>
+                    <li><a href="index.php?page=vylety" class="dropdown-item <?php echo $active_vylety ?>">Výlety do přírody</a></li>
                     <li><a href="index.php?page=kurzy-vodactvi" class="dropdown-item <?php echo $active_kurzy_vodactvi ?>">Vodácký výlet</a></li>
+
+                    <li style="text-align:center"><br><b>Kurzy</b></li>
+                    <li><a href="index.php?page=kurzy-programovani" class="dropdown-item <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
+
+                    <li><a href="index.php?page=kurzy-lukostrelby" class="dropdown-item <?php echo $active_kurzy_lukostrelby ?>">Kurzy lukostřelby</a></li>
+
+
+
+
+                    <li style="text-align:center"><br><b>Kroužky</b></li>
+                    <li><a href=" index.php?page=krouzek-programovani" class="dropdown-item <?php echo $active_krouzek_programovani ?>">Kroužek programování</a></li>
 
                 </ul>
                 </li>

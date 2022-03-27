@@ -194,7 +194,7 @@
                     <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
                 </div>
                 <div>
-                    <h4 class="display-7">„Jsme pro děti parťáci, ne diktátor“</h4>
+                    <h4 class="display-7">„Jsme pro děti parťáci, nikoli diktátoři“</h4>
                     <p>Děti vedeme k samostatnosti, přistupujeme k nim individuálně a s <b>respektem</b>. Zajišťujeme bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení.</p>
 
                 </div>
