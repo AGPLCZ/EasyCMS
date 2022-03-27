@@ -224,11 +224,13 @@
                         </th>
                         <th scope="row" class="text-start">
                             <p class="card-title pricing-card-title"><small class="fw-light">notebook, lektor, veřejné prostory</small></p>
-                            <p class="card-title pricing-card-title"><small class="fw-light">jednou týdně</small></p>
+                            <p class="card-title pricing-card-title"><small class="fw-light">schůzka jednou týdně</small></p>
+                            <p class="card-title pricing-card-title"><small class="fw-light">zvolte si vlastní cenu v rozmezí</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">125 Kč</span></p>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">400 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">150 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">500 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">300 až 1200 Kč</span></p>
                         </th>
                     </tr>
 
