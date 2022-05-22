@@ -8,117 +8,12 @@
 
 
 
-<div class="container px-4 py-2" id="hanging-icons">
-
-
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col d-flex align-items-start">
-            <div class="icon-square text-dark flex-shrink-0 me-3">
-                <i class="fa-regular fa-hand-sparkles text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
-
-
-            </div>
-            <div>
-                <h4 class="display-7">Tvořím pro děti příležitosti k osobnímu rozvoji</h4>
-                <p class="lead">Jsem živnostník aneb profesionální průvodce a lektor. Činnost pro děti tvořím tam, kde je o mne zájem, proto mne neváhejte kontaktovat. Jsem ochotný kamkoli dojíždět, a v místě Vašeho bydliště stvořit kroužek pro Vaše mladé dobrodruhy.</p>
-
-
-                <!--   <h4 class="display-7">Jsme malá parta lidí</h4>
-                <p class="lead">Jsme profesionálními lektoři, průvodci, instruktoři, jsme nejen zkušenými cestovateli, ale rozumíme i respektující výchově.</p>
--->
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square text-dark flex-shrink-0 me-3">
-                <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
-            </div>
-            <div>
-                <h4 class="display-7">Nabízím profesionální šlužby pro děti</h4>
-
-                <p class="lead">Velkým dobrodruhům pomáhám uskutečnit náročné expedice, naopak mladším rád uspořádám dobrodružný výlet na míru, v nabídce mám nejrůznější kurzy, během roku pořádám různorodé kroužky.</p>
-
-            </div>
-        </div>
-
-
-    </div>
-</div>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-<div class=" bg-light">
-
-    <div class="container px-4 mt-4 mt-5 my-4 py-0">
-
-
-
-        <div class=" row g-4 py-5 row-cols-1 row-cols-lg-5">
-
-
-            <div class="feature col text-center">
-
-                <p><i class="fad fa-users  text-primary" style="font-size: 45px"></i></p>
-
-                <h5>Kamarádi
-                </h5>
-            </div>
-
-
-            <div class="feature col text-center">
-
-                <p><i class="fad fa-campground  text-primary" style="font-size: 45px"></i></p>
-
-                <h5>Dobrodružství
-                </h5>
-            </div>
-
-
-            <div class="feature col text-center">
-
-                <p><i class="fad fa-tree  text-primary" style="font-size: 45px"></i></p>
-
-                <h5>Pobyt v přírodě
-                </h5>
-            </div>
-
-
-            <div class="feature col text-center">
-
-                <p><i class="fad fa-compass  text-primary" style="font-size: 45px"></i></p>
-
-                <h5>Dovednosti
-                </h5>
-            </div>
-
-
-            <div class="feature col text-center">
-
-                <p><i class="fad fa-grin-hearts  text-primary" style="font-size: 45px"></i></p>
-
-                <h5>Respekt
-                </h5>
-            </div>
-
-
-
-
-
-        </div>
-    </div>
-
-</div>
 
 
 
@@ -212,4 +107,115 @@
 
 
 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class=" bg-light">
+
+    <div class="container px-4 mt-4 mt-5 my-4 py-0">
+
+
+
+        <div class=" row g-4 py-5 row-cols-1 row-cols-lg-5">
+
+
+            <div class="feature col text-center">
+
+                <p><i class="fad fa-users  text-primary" style="font-size: 45px"></i></p>
+
+                <h5>Kamarádi
+                </h5>
+            </div>
+
+
+            <div class="feature col text-center">
+
+                <p><i class="fad fa-campground  text-primary" style="font-size: 45px"></i></p>
+
+                <h5>Dobrodružství
+                </h5>
+            </div>
+
+
+            <div class="feature col text-center">
+
+                <p><i class="fad fa-tree  text-primary" style="font-size: 45px"></i></p>
+
+                <h5>Pobyt v přírodě
+                </h5>
+            </div>
+
+
+            <div class="feature col text-center">
+
+                <p><i class="fad fa-compass  text-primary" style="font-size: 45px"></i></p>
+
+                <h5>Dovednosti
+                </h5>
+            </div>
+
+
+            <div class="feature col text-center">
+
+                <p><i class="fad fa-grin-hearts  text-primary" style="font-size: 45px"></i></p>
+
+                <h5>Respekt
+                </h5>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="container px-4 py-2" id="hanging-icons">
+
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-dark flex-shrink-0 me-3">
+                <i class="fa-regular fa-hand-sparkles text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
+
+
+            </div>
+            <div>
+                <h4 class="display-7">Tvořím pro děti příležitosti k osobnímu rozvoji</h4>
+                <p class="lead">Jsem živnostník aneb profesionální průvodce a lektor. Činnost pro děti tvořím tam, kde je o mne zájem, proto mne neváhejte kontaktovat. Jsem ochotný kamkoli dojíždět, a v místě Vašeho bydliště stvořit kroužek pro Vaše mladé dobrodruhy.</p>
+
+
+                <!--   <h4 class="display-7">Jsme malá parta lidí</h4>
+                <p class="lead">Jsme profesionálními lektoři, průvodci, instruktoři, jsme nejen zkušenými cestovateli, ale rozumíme i respektující výchově.</p>
+-->
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-dark flex-shrink-0 me-3">
+                <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
+            </div>
+            <div>
+                <h4 class="display-7">Nabízím profesionální šlužby pro děti</h4>
+
+                <p class="lead">Velkým dobrodruhům pomáhám uskutečnit náročné expedice, naopak mladším rád uspořádám dobrodružný výlet na míru, v nabídce mám nejrůznější kurzy, během roku pořádám různorodé kroužky.</p>
+
+            </div>
+        </div>
+
+
+    </div>
 </div>
