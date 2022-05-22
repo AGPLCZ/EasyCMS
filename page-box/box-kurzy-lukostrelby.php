@@ -46,7 +46,7 @@
                 <p><i class="fad fa-hand-holding-heart text-primary" style="font-size: 45px"></i></p>
 
                 <h4 class="fw-bold">Cena</h4>
-                <p class="fw-light">1 lekce / až 4 os. / 400 Kč
+                <p class="fw-light">1 lekce / až 4 os. / 800 Kč
 
                 </p>
             </div>
@@ -171,7 +171,7 @@
             </div>
             <div>
                 <h4 class="display-7">Lektor zajistí vhodné místo i vybavení</h4>
-                <p>V ceně lekce je zahrnuto zapůjčení veškerého začátečnického vybavení a lektor, který se bude začínajícímu střelci věnovat.</p>
+                <p>V ceně lekce je zahrnuto zapůjčení veškerého začátečnického vybavení, a lektor který se bude začínajícímu střelci věnovat.</p>
 
             </div>
         </div>

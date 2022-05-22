@@ -1,7 +1,7 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
-    <h1 class="display-5 fw-bold">Připravíme výlet na míru</h1>
+    <h1 class="display-5 fw-bold">Připravím výlet na míru</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Nabízíme dětem zážitky a příležitosti k osobnímu rozvoji
+        <p class="lead mb-4">Nabízím dětem zážitky a příležitosti k osobnímu rozvoji
 
         </p>
 
@@ -18,7 +18,7 @@
         <d class="col-lg-6">
 
             <div class="pb-1 py-0">
-                <h2 class="fw-bold lh-1 mb-3">Mladé dobrodruhy učíme základním cestovatelským dovednostem</h2>
+                <h2 class="fw-bold lh-1 mb-3">Mladé dobrodruhy učím základním cestovatelským dovednostem</h2>
                 <p class="lead">
                     Při cestování, získávají praktické dovednosti: jak číst v jízdních řádech a hledat spoje nebo jak se orientovat podle mapy, ať už jsme ve městě či v lese. Učíme se i tábornickým dovednostem, jak se ochránit před deštěm a proti prochladnutí, jak postavit stan, jak rozdělat oheň a uvařit si jídlo.​​</p>
 
@@ -79,9 +79,9 @@
 
 
 <div class="px-4 py-1 my-0 pt-5 text-center">
-    <h1 class="display-7 fw-bold">S profesionálními průvodci budou mít pomocnou ruku </h1>
+    <h1 class="display-7 fw-bold">S profesionálním průvodcem budou mít pomocnou ruku </h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Provázíme mladé dobrodruhy na cestách za poznáním, a zajišťujeme bezpečné putování
+        <p class="lead mb-4">Provázím mladé dobrodruhy na cestách za poznáním, a zajišťuji bezpečné putování
 
 
         </p>

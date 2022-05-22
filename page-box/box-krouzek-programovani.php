@@ -49,7 +49,7 @@
                 <p><i class="fad fa-hand-holding-heart text-primary" style="font-size: 45px"></i></p>
 
                 <h4 class="fw-bold">Cena</h4>
-                <p class="fw-light">1 os. / měsíc / 300 Kč
+                <p class="fw-light">1 os. / měsíc / 800 Kč
                 </p>
             </div>
 
@@ -112,8 +112,8 @@
 
 
 
-            <h4 class="fw-bold">Děti provedeme IT světem</h4>
-            <p class="fw-light lh-base">V kroužku se učíme základy programování a vytvářet jednoduché 2D hry. Pomůžeme a poradíme avšak na většinu věcí přicházejí děti samostatně.</p>
+            <h4 class="fw-bold">Děti provedu IT světem</h4>
+            <p class="fw-light lh-base">V kroužku se učíme základy programování a vytvářet jednoduché 2D hry. Pomohu a poradím avšak na většinu věcí přicházejí děti samostatně.</p>
             <p class="fw-light lh-base">Každému účastníkovi na lekci <b>zapůjčíme notebook</b>, je možné používat i vlastní zařízení.</p>
 
 

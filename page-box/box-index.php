@@ -6,7 +6,7 @@
             <h1 class="display-6 fw-bold">Když potřebujete průvodce
             </h1>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Vytváříme pro děti z Brna a okolí příležitosti k všestrannému rozvoji, pořádáme výlety, expedice, kurzy, kroužky, věnujeme se vzdělávání, praktickým dovednostem, a dalším volnočasovým aktivitám a hrám.</p>
+                <p class="lead mb-4">Vytvářím pro děti z Brna a okolí příležitosti k všestrannému rozvoji, pořádám výlety, expedice, kurzy, kroužky, věnujeme se vzdělávání, praktickým dovednostem, a dalším volnočasovým aktivitám a hrám.</p>
                 <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="https://dobrodruzi.club/" type="button" class="btn btn-primary btn-lg px-4 gap-3">Klub dobrodruhů &raquo;</a>
                 <a href="index.php?page=o-nas" type="button" class="btn btn-outline-secondary btn-lg px-4">Více o nás</a>
@@ -37,7 +37,7 @@
                         <div class="pb-1 py-0">
                             <h2 class="  fw-bold lh-1 mb-3">Putujeme přírodou a učíme se novým dovednostem</h2>
                             <p class="lead">
-                                S dětmi zkoumáme svět, bádáme, učíme se a hrajeme si, se staršími dobrodruhy společně plánujeme a uskutečňujeme velká dobrodružství.
+                                S dětmi zkoumám svět, bádáme, učíme se a hrajeme si, se staršími dobrodruhy společně plánujeme a uskutečňujeme velká dobrodružství.
                             </p>
 
                             <p class="lead">
@@ -46,7 +46,8 @@
 
 
                         <div class="mb-5">
-                            <a href="https://dobrodruzi.club/" class="btn btn-primary btn-lg px-4" target="_blank">Klub mladých dobrodruhů &raquo;</a>
+                            <a href="https://dobrodruzi.cz/index.php?page=vylety" class="btn btn-primary btn-lg px-4">Výlety do přírody &raquo;</a>
+                            <!--   <a href="https://dobrodruzi.club/" class="btn btn-primary btn-lg px-4" target="_blank">Klub mladých dobrodruhů &raquo;</a>-->
                         </div>
 
 
@@ -103,7 +104,7 @@
 
 
                     <h3 class="fw-bold">Kurzy</h3>
-                    <p class=" fw-light">Nabízíme vzdělávací činnosti, výuku programování, sjíždění řek na nafukovacích kánojích, cestovatelksé dovednosti a znalosti. </p>
+                    <p class=" fw-light">Nabízím vzdělávací činnosti, výuku programování, sjíždění řek na nafukovacích kánojích, cestovatelksé dovednosti a znalosti. </p>
                     <a class="btn btn-outline-secondary" href="index.php?page=kurzy-programovani" role="button">Více o kurzech &raquo;</a>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
@@ -184,8 +185,8 @@
 
                 </div>
                 <div>
-                    <h4 class="display-7">Připravujeme řízený program formou nabídky</h4>
-                    <p>Využíváme <b>vnitřní motivace</b> dětí, aby se mohly věnovat věcem proto, že v nich vidí <b>smysl</b>, že je baví a že samy chtějí.</p>
+                    <h4 class="display-7">Připravuji řízený program formou nabídky</h4>
+                    <p>Využívám <b>vnitřní motivace</b> dětí, aby se mohly věnovat věcem proto, že v nich vidí <b>smysl</b>, že je baví a že samy chtějí.</p>
 
                 </div>
             </div>
@@ -194,8 +195,8 @@
                     <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
                 </div>
                 <div>
-                    <h4 class="display-7">„Jsme pro děti parťáci, nikoli diktátoři“</h4>
-                    <p>Děti vedeme k samostatnosti, přistupujeme k nim individuálně a s <b>respektem</b>. Zajišťujeme bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení.</p>
+                    <h4 class="display-7">„Jsem pro děti parťák, nikoli diktátor“</h4>
+                    <p>Děti vedu k samostatnosti, přistupuji k nim individuálně a s <b>respektem</b>. Zajišťuji bezpečné a motivující prostředí, ve kterém se mohou všestranně rozvíjet. Dávám jim prostor pro volnou hru a svobodné učení.</p>
 
                 </div>
             </div>
@@ -213,7 +214,7 @@
     <div class="px-4 py-1 my-0 pt-5 text-center">
         <h3 class="display-6 fw-bold">Učíme se prostřednictvím přírody</h3>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Volnočasové aktivity organizujeme převážně v přírodě, protože pobyt venku a pohyb na čerstvém vzduchu podporuje zdraví a odolnost dětí. Děti poznávají okolí místa, kde žijí, osvojují si praktické cestovatelské dovednosti a učí se rozpoznat přirozená nebezpečí.
+            <p class="lead mb-4">Volnočasové aktivity organizuji převážně v přírodě, protože pobyt venku a pohyb na čerstvém vzduchu podporuje zdraví a odolnost dětí. Děti poznávají okolí místa, kde žijí, osvojují si praktické cestovatelské dovednosti a učí se rozpoznat přirozená nebezpečí.
             </p>
 
         </div>
@@ -290,7 +291,7 @@
                     <p><i class="fad fa-map-marked-alt text-primary" style="font-size: 45px"></i></p>
 
                     <h4 class="fw-bold">Místa konání</h4>
-                    <p class="fw-light">Scházíme se v Brně, na kurzy a kroužky v <a href="https://goo.gl/maps/Sp4Eth2foBivVxAm9" target="_blank">Novém Lískovci</a>, na výlety a expedice vyrážíme z Hlavního vlakového nádraží.</p>
+                    <p class="fw-light">Scházíme se v Brně a okolí, nejlepší učebna je sama příroda, v zimě hledáme úkryt v různých <a href="https://goo.gl/maps/itTNU4573LkMN6Jj7" target="_blank">klubovnách.</a></p>
 
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -327,7 +328,7 @@
     <div class="px-4 py-1 my-3 text-center">
         <h1 class="display-6 fw-bold">Nyní jsou nejžádanější kurzy programování</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Děti učíme programovat, vytváříme počítačové hry, a trávíme čas ve zdravém prostředí.</p>
+            <p class="lead mb-4">Děti učím programovat, vytváříme počítačové hry, a trávíme čas ve zdravém prostředí.</p>
         </div>
         <a href="http://dobrodruzi.cz/index.php?page=kurzy-programovani" type="button" class="btn btn-primary btn-lg px-4 gap-3">Více o kurzech</a>
     </div>

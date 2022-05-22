@@ -105,8 +105,8 @@
 
             </div>
             <div>
-                <h4 class="display-7">„Připravíme akci na míru“</h4>
-                <p>Naplánujeme výlet a zajistíme veškerý servis. V ceně jsou zahrnuté všechny potřebné náklady: doprava, jídlo, profesionální průvodcovské služby, lodě, samozřejmostí je i bezpečnostní vybavení pro každého účastníka.</p>
+                <h4 class="display-7">„Připravím akci na míru“</h4>
+                <p>Naplánuji výlet a zajistíme veškerý servis. V ceně jsou zahrnuté všechny potřebné náklady: doprava, jídlo, profesionální průvodcovské služby, lodě, samozřejmostí je i bezpečnostní vybavení pro každého účastníka.</p>
 
 
 

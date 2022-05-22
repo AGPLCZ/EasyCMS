@@ -44,7 +44,9 @@
                 --> <i class="fa-light fa-campfire  text-primary" style="font-size: 25px"></i> <b>dobrodruzi<span class=" text-black">.cz</b>
 
                     <p class="fs-6 text-black">
-                        <i>profesionální průvodci a lektoři</i>
+
+                        <i>Když potřebujete průvodce či lektora</i>
+                        <!--   <i>profesionální průvodci a lektoři</i><i>Nabízím profesionální průvodcovské a lektorské<br> služby mladým dobrodruhům</i>-->
                     </p>
                 </span>
 
@@ -119,18 +121,18 @@
 
                 <li class="nav-item"><a href="index.php?page=index" class="nav-link <?php echo $active_index ?>" aria-current="page">Úvodní stránka</a></li>
                 <li class="nav-item dropdown">
-                <li class="nav-item"><a href="index.php?page=o-nas" class="nav-link <?php echo $active_onas ?>">O nás</a></li>
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízíme</a>
+                <li class="nav-item"><a href="index.php?page=o-nas" class="nav-link <?php echo $active_onas ?>">O mne</a></li>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Nabízím</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
-                    <li style="text-align:center"><br><b>Výlety</b></li>
-                    <li><a href="index.php?page=vylety" class="dropdown-item <?php echo $active_vylety ?>">Výlety do přírody</a></li>
-                    <li><a href="index.php?page=kurzy-vodactvi" class="dropdown-item <?php echo $active_kurzy_vodactvi ?>">Vodácký výlet</a></li>
 
                     <li style="text-align:center"><br><b>Kurzy</b></li>
                     <li><a href="index.php?page=kurzy-programovani" class="dropdown-item <?php echo $active_kurzy_programovani ?>">Kurzy programování</a></li>
 
                     <li><a href="index.php?page=kurzy-lukostrelby" class="dropdown-item <?php echo $active_kurzy_lukostrelby ?>">Kurzy lukostřelby</a></li>
 
+                    <li style="text-align:center"><br><b>Výlety</b></li>
+                    <li><a href="index.php?page=vylety" class="dropdown-item <?php echo $active_vylety ?>">Výlety do přírody</a></li>
+                    <li><a href="index.php?page=kurzy-vodactvi" class="dropdown-item <?php echo $active_kurzy_vodactvi ?>">Vodácký výlet</a></li>
 
 
 
@@ -231,7 +233,7 @@
 
 
                             <h1 class="display-6 fw-bold" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Putujeme přírodou a učíme se novým dovednostem</h1>
-                            <p class="text-caption" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Provázíme mladé dobrodruhy na cestách za poznáním</p>
+                            <p class="text-caption" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Provázím mladé dobrodruhy na cestách za poznáním</p>
                             <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
                         </div>
                     </div>
@@ -244,7 +246,7 @@
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Nabízíme zážitky na celý život</h1>
+                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">Nabízím zážitky na celý život</h1>
                             <p style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">výlety I expedice I vzdělávací kurzy</p>
                             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>
@@ -260,7 +262,7 @@
                     <div class="zigzag"></div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">VYTVÁŘÍME PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
+                            <h1 class="" style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">VYTVÁŘÍM PRO DĚTI PŘÍLEŽITOSTI K SEBEROZVOJI</h1>
                             <p style="text-transform: uppercase; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);">A TRÁVÍME ČAS VE ZDRAVÉM PROSTŘEDÍ</p>
                             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
                         </div>

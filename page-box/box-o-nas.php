@@ -1,5 +1,5 @@
 <div class="px-0 py-1 my-0 pt-5 text-center">
-    <h3 class="display-6 fw-bold">O nás</h3>
+    <h3 class="display-6 fw-bold">O mne</h3>
     <div class="col-lg-6 mx-auto">
     </div>
 </div>
@@ -14,14 +14,18 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="col d-flex align-items-start">
             <div class="icon-square text-dark flex-shrink-0 me-3">
-                <i class="fas fas fa-users text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
+                <i class="fa-regular fa-hand-sparkles text-primary rounded" style="font-size: 45px; padding: 0px;"> </i>
 
 
             </div>
             <div>
-                <h4 class="display-7">Jsme malá parta lidí</h4>
-                <p class="lead">Jsme profesionálními lektoři, průvodci, instruktoři, jsme nejen zkušenými cestovateli, ale rozumíme i respektující výchově.</p>
+                <h4 class="display-7">Tvořím pro děti příležitosti k osobnímu rozvoji</h4>
+                <p class="lead">Jsem živnostník aneb profesionální průvodce a lektor. Činnost pro děti tvořím tam, kde je o mne zájem, proto mne neváhejte kontaktovat. Jsem ochotný kamkoli dojíždět, a v místě Vašeho bydliště stvořit kroužek pro Vaše mladé dobrodruhy.</p>
 
+
+                <!--   <h4 class="display-7">Jsme malá parta lidí</h4>
+                <p class="lead">Jsme profesionálními lektoři, průvodci, instruktoři, jsme nejen zkušenými cestovateli, ale rozumíme i respektující výchově.</p>
+-->
             </div>
         </div>
         <div class="col d-flex align-items-start">
@@ -29,9 +33,9 @@
                 <i class="fas fas fa-handshake text-primary  rounded" style="font-size: 45px; padding: 0px;"> </i>
             </div>
             <div>
-                <h4 class="display-7">Nabízíme profesionální šlužby pro děti</h4>
+                <h4 class="display-7">Nabízím profesionální šlužby pro děti</h4>
 
-                <p class="lead">Velkým dobrodruhům pomáháme uskutečnit náročné expedice, naopak mladším rádi uspořádáme dobrodružný výlet na míru, v nabídce máme nejrůznější kurzy, během roku pořádáme různorodé kroužky.</p>
+                <p class="lead">Velkým dobrodruhům pomáhám uskutečnit náročné expedice, naopak mladším rád uspořádám dobrodružný výlet na míru, v nabídce mám nejrůznější kurzy, během roku pořádám různorodé kroužky.</p>
 
             </div>
         </div>
@@ -122,7 +126,7 @@
 
 
 <div class="text-secondary px-4 pt-5 text-center mb-0">
-    <h1 class="display-5 fw-bold text-black">Lektor - Petr Lízal </h1>
+    <h1 class="display-5 fw-bold text-black">AG - Petr Lízal </h1>
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4 text-black"">Jsem zkušený cestovatel a průvodce dětí. Rozumím respektující výchově dětí, mám nápady jak udělat dětem ze života radost a příležitost k seberozvoji.​</p>
     </div>

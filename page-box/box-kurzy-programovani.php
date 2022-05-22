@@ -1,7 +1,7 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
     <h1 class="display-5 fw-bold">Soukromé kurzy programování</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Děti učíme programovat, vytváříme počítačové hry, a trávíme čas ve zdravém prostředí.
+        <p class="lead mb-4">Děti učím programovat, vytváříme počítačové hry, a trávíme čas ve zdravém prostředí.
 
         </p>
 
@@ -49,7 +49,7 @@
                 <p><i class="fad fa-hand-holding-heart text-primary" style="font-size: 45px"></i></p>
 
                 <h4 class="fw-bold">Cena</h4>
-                <p class="fw-light">1 os. / měsíc / 400 Kč
+                <p class="fw-light">1 os. / měsíc / 800 Kč
                 </p>
             </div>
 
@@ -85,12 +85,12 @@
 
             <div class="feature col text-center">
 
-                <p><i class="fad fa-rv text-primary" style="font-size: 45px"></i></p>
+                <p><i class="fa-duotone fa-motorcycle text-primary" style="font-size: 45px"></i></p>
 
 
 
                 <h4 class="fw-bold">Kde</h4>
-                <p class=" fw-light"><a href="https://goo.gl/maps/itTNU4573LkMN6Jj7" target="_blank">kavárny, přístřešky, klubovny</a></p>
+                <p class=" fw-light"><a href="https://goo.gl/maps/itTNU4573LkMN6Jj7" target="_blank">dorazím na vámi zvolené libovolné místo</a></p>
 
             </div>
 
@@ -126,7 +126,7 @@
 
 
 
-            <h4 class="fw-bold">Děti provedeme IT světem</h4>
+            <h4 class="fw-bold">Děti provedu IT světem</h4>
             <p class="fw-light lh-base">Na kurzu se budeme učit základy programování a vytvářet jednoduché 2D hry. Každému účastníkovi na lekci zapůjčíme notebook, je možné používat i vlastní zařízení.</p>
 
 
@@ -151,8 +151,8 @@
 
 
 
-            <h4 class="fw-bold">Pomůžeme v těžkých začátcích</h4>
-            <p class="fw-light lh-base">Ukážeme základy programování (podmínky, cykly - for a while), následně zkušeným vývojářům nabízíme online podporu přes Discord. Na většinu věcí mohou děti přicházet i doma samostatně.</p>
+            <h4 class="fw-bold">Pomohu v těžkých začátcích</h4>
+            <p class="fw-light lh-base">Ukáži základy programování (podmínky, cykly - for a while), následně zkušeným vývojářům nabízím online podporu. Na většinu věcí mohou děti přicházet i doma samostatně.</p>
 
 
         </div>

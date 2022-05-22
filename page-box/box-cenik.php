@@ -1,7 +1,7 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
     <h1 class="display-5 fw-bold">Jaké jsou náklady na naše dobrodružství?</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Bez vaší finanční podpory nemůžeme dělat to, co děláme; shledáváte-li naši činnost smysluplnou, budeme rádi, když naši práci oceníte.
+        <p class="lead mb-4">Bez vaší finanční podpory nemůžeme dělat to, co děláme; shledáváte-li naši činnost smysluplnou, budu rád, když naši práci oceníte.
         </p>
 
     </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div>
                     <h2>Kurzy a kroužky</h2>
-                    <p>Účast dětí na některých kroužcích a kurzech je zdarma, naopak některé máme spoplatněny. Pravidelné akce - 400 až 1000 Kč / měsíc. Jednorázové akce - 150 až 1000 Kč</p>
+                    <p>Během roku se potřebujeme k činnosti klubovnu, jen za jednu zaplatíme 15 tisíc za rok. Účastníci mají v ceně i profesionálního lektora. Ceny se pohybují kolem 1000 Kč za měsíc.</p>
 
 
 
@@ -224,13 +224,13 @@
                         </th>
                         <th scope="row" class="text-start">
                             <p class="card-title pricing-card-title"><small class="fw-light">notebook, lektor, veřejné prostory</small></p>
-                            <p class="card-title pricing-card-title"><small class="fw-light">schůzka jednou týdně</small></p>
+                            <p class="card-title pricing-card-title"><small class="fw-light">jednou týdně / 4x měsíčně</small></p>
                             <p class="card-title pricing-card-title"><small class="fw-light">zvolte si vlastní cenu v rozmezí</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">150 Kč</span></p>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">500 Kč</span></p>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">300 až 1200 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">200 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">800 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">500 až 1200 Kč</span></p>
                         </th>
                     </tr>
 
@@ -243,8 +243,8 @@
                             <p class="card-title pricing-card-title"><small class="fw-light">jednou týdně</small></p>
                         </th>
                         <th>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1. os. / 1 lekce / </small><span class="fw-light">300 Kč</span></p>
-                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">400 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">4. os. / 1 lekce / </small><span class="fw-light">800 Kč</span></p>
+                            <p class="card-title pricing-card-title"><small class="text-muted fw-light">1 os. / měsíc / </small><span class="fw-light">800 Kč</span></p>
                         </th>
                     </tr>
                     <tr>
@@ -322,7 +322,7 @@
 <div class="px-4 py-1 my-0 pt-5 text-center">
     <h1 class="display-5 fw-bold">Oceňte zážitky a radost vašich dětí</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Pokud jsou Vám naše aktivity sympatické a jste nadšení z akcí, které připravujeme pro vaše děti, můžete naši činnost podpořit i finančním darem. Nejvíce nám pomůžete pravidelnými měsíčními příspěvky (i nízkými).
+        <p class="lead mb-4">Pokud jsou Vám moje aktivity sympatické a jste nadšení z akcí, které připravuji pro vaše děti, můžete moji činnost podpořit i finančním darem. Nejvíce mi pomůžete pravidelnými měsíčními příspěvky (i nízkými).
         </p>
 
     </div>
@@ -394,7 +394,7 @@
 
 <div class="px-4 py-1 my-0 pt-5 text-center">
 
-    <h4>Děkujeme za podporu!</h4>
+    <h4>Děkuji za podporu!</h4>
     <p>1004823025/3030 - variabilní symbol: 1050</p>
 </div>
 </div>
