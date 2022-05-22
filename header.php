@@ -45,7 +45,7 @@
 
                     <p class="fs-6 text-black">
 
-                        <i>Když potřebujete průvodce či lektora</i>
+                        <i>Když potřebujete průvodce či lektora pro Vašeho mladého dobrodruha ;-)</i>
                         <!--   <i>profesionální průvodci a lektoři</i><i>Nabízím profesionální průvodcovské a lektorské<br> služby mladým dobrodruhům</i>-->
                     </p>
                 </span>
